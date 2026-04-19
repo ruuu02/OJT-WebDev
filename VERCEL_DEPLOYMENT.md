@@ -7,6 +7,7 @@ The repository includes:
 - `vercel.json` to enable the community PHP runtime, route public assets, and send app routes to Laravel.
 - `api/index.php` as the Vercel serverless entry point.
 - `database/database.sqlite`, a pre-seeded showcase database for the public pages.
+- `excludeFiles` in `vercel.json` keeps large static image folders out of the PHP function bundle so it stays below Vercel's function size limit.
 
 After pushing these files, redeploy the project in Vercel. If Vercel asks for a framework preset, choose **Other**.
 

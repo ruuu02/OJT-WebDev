@@ -3,7 +3,8 @@
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.7.4",
-      "maxDuration": 10
+      "maxDuration": 10,
+      "excludeFiles": "{public/images/**,public/videos/**,reports/**,docs/**,tests/**,storage/logs/**,storage/framework/cache/**,storage/framework/sessions/**,storage/framework/testing/**,storage/framework/views/**,*.jpg,temp_test.txt}"
     }
   },
   "routes": [
