@@ -1,0 +1,801 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ULTRAFOOD</title>
+  <link rel="icon" type="image/png" href="/images/favicon/Ultrafood-Favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300;400;500;600;700;800&family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#4B7A08',
+            olive:  '#79CE1B',
+            sage:   '#95F125',
+            tan:    '#E5FA38',
+            cream:  '#F4FAE8',
+            dark:   '#1a2e04',
+          },
+          fontFamily: {
+            display: ['"Anek Latin"', 'sans-serif'],
+            body:    ['"Spline Sans"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="/css/ultrafood/base.css">
+  <link rel="stylesheet" href="/css/ultrafood/reveal.css">
+  <link rel="stylesheet" href="/css/ultrafood/header.css">
+  <link rel="stylesheet" href="/css/ultrafood/hero.css">
+  <link rel="stylesheet" href="/css/ultrafood/about.css">
+  <link rel="stylesheet" href="/css/ultrafood/mission.css">
+  <link rel="stylesheet" href="/css/ultrafood/strengths.css">
+  <link rel="stylesheet" href="/css/ultrafood/brands.css">
+  <link rel="stylesheet" href="/css/ultrafood/floaters.css">
+  <link rel="stylesheet" href="/css/ultrafood/history.css">
+  <link rel="stylesheet" href="/css/ultrafood/contact.css">
+  <link rel="stylesheet" href="/css/ultrafood/footer.css">
+  <link rel="stylesheet" href="/css/ultrafood/backtotop.css">
+  <link rel="stylesheet" href="/css/ultrafood/responsive.css">
+  <link rel="stylesheet" href="/css/ultrafood/map.css">
+
+
+</head>
+<body class="font-body" data-is-visual-editor="0">
+
+
+
+
+
+
+
+<style>
+  #backToTop  {
+    --btt-bg:#4B7A08;
+    --btt-fg:#ffffff;
+    --btt-hover-bg:#1a2e04;
+  }
+  #header     {  }
+  #hero       {  }
+  #about      {  }
+  #mission    {  }
+  #strengths  {  }
+  #brands     {  }
+  #history    {  }
+  #clients    {  }
+  #contact    { --contact-bg:#79ce1b; }
+  footer      {  }
+</style>
+
+
+
+
+
+
+<header id="header" class="fixed top-0 z-50 px-6 lg:px-10">
+  <div class="max-w-7xl mx-auto flex items-center justify-between h-24">
+
+    <a href="#hero" class="flex items-center flex-shrink-0">
+      <img src="/images/logo/65480775-6edc-4e3e-b8c4-f989fe69c17c.png" alt="Ultrafood Distributors Inc" class="h-20 w-auto" />
+    </a>
+
+    <nav id="desktopNav" class="hidden md:flex items-center gap-1 ml-auto">
+              <a href="#about" data-ve-field="nav_about" class="nav-link text-sm font-medium tracking-wide px-4 py-2 rounded-lg uppercase">About Us</a>
+              <a href="#mission" data-ve-field="nav_mission" class="nav-link text-sm font-medium tracking-wide px-4 py-2 rounded-lg uppercase">Purpose</a>
+              <a href="#strengths" data-ve-field="nav_strengths" class="nav-link text-sm font-medium tracking-wide px-4 py-2 rounded-lg uppercase">Strengths</a>
+              <a href="#brands" data-ve-field="nav_brands" class="nav-link text-sm font-medium tracking-wide px-4 py-2 rounded-lg uppercase">Brands</a>
+              <a href="#history" data-ve-field="nav_history" class="nav-link text-sm font-medium tracking-wide px-4 py-2 rounded-lg uppercase">History</a>
+              <a href="#clients" data-ve-field="nav_clients" class="nav-link text-sm font-medium tracking-wide px-4 py-2 rounded-lg uppercase">Clients</a>
+              <a href="#contact" data-ve-field="nav_contact" class="nav-link text-sm font-medium tracking-wide px-4 py-2 rounded-lg uppercase">Contact</a>
+          </nav>
+
+    <button id="burger" class="flex md:hidden flex-col gap-[5px] p-2 bg-transparent border-0 cursor-pointer ml-auto" aria-label="Menu">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+    </button>
+
+  </div>
+
+  <nav id="mobileNav">
+          <a href="#about" class="mobile-nav-link">About Us</a>
+          <a href="#mission" class="mobile-nav-link">Purpose</a>
+          <a href="#strengths" class="mobile-nav-link">Strengths</a>
+          <a href="#brands" class="mobile-nav-link">Brands</a>
+          <a href="#history" class="mobile-nav-link">History</a>
+          <a href="#clients" class="mobile-nav-link">Clients</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+
+</header>
+
+
+
+<div id="hero-wrapper">
+<section id="hero" class="relative overflow-hidden">
+
+  <div class="slide active">
+    <img src="/images/banner/099f0de1-2127-4f8c-ae59-b353ebe21450.png" alt="Welcome Banner" class="slide-img" fetchpriority="high" decoding="async" />
+    <div class="slide-overlay"></div>
+  </div>
+
+  <div class="slide">
+    <img src="/images/banner/UFDI-Our-Brands-Banner.png" alt="Our Brands Banner" class="slide-img" loading="lazy" decoding="async" />
+    <div class="slide-overlay"></div>
+  </div>
+
+  <div class="slide">
+    <img src="/images/banner/UFDI-Accreditations-Banner.png" alt="Accreditations Banner" class="slide-img" loading="lazy" decoding="async" />
+    <div class="slide-overlay"></div>
+  </div>
+
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 z-20">
+    <button class="carousel-dot active" aria-label="Slide 1"></button>
+    <button class="carousel-dot" aria-label="Slide 2"></button>
+    <button class="carousel-dot" aria-label="Slide 3"></button>
+  </div>
+
+</section>
+</div>
+
+
+
+<section id="about" class="py-20 bg-white">
+  <div class="about-inner">
+
+    <div class="about-img-wrap reveal-left img-zoom">
+      <img src="/images/banner/ec84a286-bc3e-4af9-b69e-a0e46ae226b2.png" alt="About UltraFood" class="w-full h-full object-cover" />
+    </div>
+
+    <div class="about-text reveal-right">
+      <h2>ULTRAFOOD DISTRIBUTORS INC.</h2>
+      <p class="about-desc">Has steadily gained recognition as a professional and reputable organization in the Fast-Moving Consumer Goods (FMCG) sector. Our commitment to excellence, combined with our dedication to building strong and long-term partnerships, made us a trusted brand in this fast-paced industry.</p>
+      <p class="about-desc">We are driven by a desire to meet the needs of our customers, and this inspires us to continually strive for product creation and innovation while remaining dedicated to delivering high-quality food solutions.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="uf-floater-band uf-floater-band--about" aria-hidden="true">
+  <div class="uf-floater uf-floater--right">
+    <img
+      src="/images/ultrafood/Ultrafood-Floater-1.png"
+      alt=""
+      class="uf-floater-media reveal-right td1"
+            loading="lazy"
+      decoding="async"
+    />
+  </div>
+</div>
+
+
+<section id="mission" class="overflow-hidden py-12 sm:py-16">
+
+  <div class="mv-two-col-wrap reveal-up">
+
+    <div class="mv-card">
+      <div class="mv-card-icon-wrap">
+        <img src="/images/icons/947af148-a9a2-4d45-8eb9-5132c55741a9.png" alt="Mission icon" class="mv-card-icon" />
+      </div>
+      <span class="mv-card-label">MISSION</span>
+      <p class="mv-card-desc">To provide high-quality food products that meet the diverse needs of our consumers. We are committed to innovation and providing our customers the greatest opportunity for success in their marketplace.</p>
+    </div>
+
+    <div class="mv-card">
+      <div class="mv-card-icon-wrap">
+        <img src="/images/icons/9f97d525-cd26-4d90-9806-3eaf7de2f2e7.png" alt="Vision icon" class="mv-card-icon" />
+      </div>
+      <span class="mv-card-label">VISION</span>
+      <p class="mv-card-desc">To be an industry leader in providing high-quality, innovative food products to our customers and to become a major player in the Philippine manufacturing and distribution business as a professional and reputable organization.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<div class="uf-floater-band uf-floater-band--strengths" aria-hidden="true">
+  <div class="uf-floater uf-floater--left">
+    <img
+      src="/images/ultrafood/Ultrafood-Floater-2.png"
+      alt=""
+      class="uf-floater-media reveal-left td2"
+            loading="lazy"
+      decoding="async"
+    />
+  </div>
+</div>
+
+
+<section id="strengths" class="strengths-section">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8">
+
+    <div class="reveal-up strengths-heading text-center flex flex-col items-center gap-2">
+      <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-black">
+        WHAT SET US APART
+      </h2>
+    </div>
+
+    
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 strengths-grid">
+      <div class="strength-card-wrapper">
+      <div class="strength-card" id="strengthCard1">
+        <img
+          class="strength-icon"
+          src="/images/icons/4b809e30-b1fb-4058-8d32-dd2a7797a364.png"
+          alt="WIDE DISTRIBUTION icon"
+          loading="lazy"
+        />
+        <h4>WIDE DISTRIBUTION</h4>
+        <p>Extensive distribution network reaching both rural and urban areas, modern trade, and traditional retail stores across the Philippines.</p>
+      </div>
+    </div>
+      <div class="strength-card-wrapper">
+      <div class="strength-card" id="strengthCard2">
+        <img
+          class="strength-icon"
+          src="/images/icons/Product-Diversity-Icon.png"
+          alt="PRODUCT DIVERSITY icon"
+          loading="lazy"
+        />
+        <h4>PRODUCT DIVERSITY</h4>
+        <p>Expanding product offerings to meet the diverse needs of our consumers.</p>
+      </div>
+    </div>
+      <div class="strength-card-wrapper">
+      <div class="strength-card" id="strengthCard3">
+        <img
+          class="strength-icon"
+          src="/images/icons/Innovative-Icon.png"
+          alt="INNOVATIVE icon"
+          loading="lazy"
+        />
+        <h4>INNOVATIVE</h4>
+        <p>Continuous product innovation and development maintaining market relevance and trends.</p>
+      </div>
+    </div>
+      <div class="strength-card-wrapper">
+      <div class="strength-card" id="strengthCard4">
+        <img
+          class="strength-icon"
+          src="/images/icons/Logistic-Efficiency-Icon.png"
+          alt="LOGISTIC EFFICIENCY icon"
+          loading="lazy"
+        />
+        <h4>LOGISTIC EFFICIENCY</h4>
+        <p>Ensures our valued consumers access our products anywhere and anytime by optimizing product shipments timely and effectively.</p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+
+<div class="uf-floater-band uf-floater-band--brands" aria-hidden="true">
+  <div class="uf-floater uf-floater--right">
+    <img
+      src="/images/ultrafood/Ultrafood-Floater-3.png"
+      alt=""
+      class="uf-floater-media reveal-right td3"
+            loading="lazy"
+      decoding="async"
+    />
+  </div>
+</div>
+
+<section id="brands" class="py-14 sm:py-16 lg:py-20">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8">
+
+    <div class="reveal-up text-center mb-10 sm:mb-12 flex flex-col items-center gap-2">
+      <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-black brands-heading">
+        DISTINCT BRANDS, ONE VISION
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-8">
+
+      <a href="/brands/menu" id="brandMenuCard"
+         class="brand-card reveal-up rounded-xl overflow-hidden hover:-translate-y-1.5 hover:shadow-xl transition-all duration-400">
+        <div class="brand-img-wrap relative flex items-center justify-center min-h-[200px] sm:min-h-[220px]">
+          <img src="/images/logo/e2288ce5-75d7-4fc3-a4b2-8fb3642a811a.png"
+               alt="Menu Food"
+               class="brand-menu-logo w-auto" />
+        </div>
+        <div class="px-6 py-5">
+          <h3 class="font-display text-xl font-bold mb-1.5 brand-card-title">Menu Food Solutions</h3>
+          <p class="text-xs leading-relaxed font-bold italic brand-card-tagline">
+            &ldquo;Sarap-saya sa bawat bite!&rdquo;
+          </p>
+          <p class="text-xs leading-relaxed brand-card-desc">
+            Ginagawang masarap at unforgettable ang bawat recipe. Halina at tikman ang next big taste na siguradong magpapasaya at magpapabusog sa lahat!
+          </p>
+        </div>
+      </a>
+
+      <a href="/brands/nordic" id="brandNordicCard"
+         class="brand-card reveal-up td1 rounded-xl overflow-hidden hover:-translate-y-1.5 hover:shadow-xl transition-all duration-400">
+        <div class="brand-img-wrap relative flex items-center justify-center min-h-[200px] sm:min-h-[220px]">
+          <img src="/images/logo/Korpala-Nordic-Logo.png"
+               alt="Korpala Nordic"
+               class="brand-nordic-logo w-auto" />
+        </div>
+        <div class="px-6 py-5">
+          <h3 class="font-display text-xl font-bold mb-1.5 brand-card-title">Nordic Foods PH</h3>
+          <p class="text-xs leading-relaxed font-bold italic brand-card-tagline">
+            &ldquo;Finland straight to your taste buds.&rdquo;
+          </p>
+          <p class="text-xs leading-relaxed brand-card-desc">
+            Wholesome goodness, premium ingredients â€” all thoughtfully combined to create a bowl experience that is both satisfying and nourishing.
+          </p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="history" class="history-section py-14 sm:py-16 lg:py-20">
+  <div class="history-overlay"></div>
+
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 relative z-10">
+
+    <div class="reveal-up text-center mb-8 flex flex-col items-center gap-2">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black">OUR JOURNEY THROUGH TIME</h2>
+    </div>
+
+    
+    <div class="hist-center-col">
+ 
+      <div class="hist-carousel-viewport">
+        <div class="hist-carousel-track" id="histCarouselTrack">
+          <div class="hist-cards-container" id="histCardsContainer">
+                        <div class="history-card active" data-idx="0" id="histCard0">
+              <div class="history-card-inner">
+                <img id="histBgRef0" class="hist-bg-ref"
+                     src="/images/banner/0d92d472-0e40-4039-9e77-c5c8b55a8e13.png"
+                     style="display:none" aria-hidden="true" alt="" />
+                
+                <div class="hist-peek-label">
+                  <span class="hist-peek-year">2005</span>
+                </div>
+                
+                <div class="hist-card-content active">
+                  <span class="hist-watermark">2005</span>
+                  <p class="hist-description-text">Founded in September 2005 as Appenzell Inc., ULTRAFOOD DISTRIBUTORS INC. specialized in the distribution of powdered and liquid condiment products catering to both the General Trade and HORECA. Following the initial launch, broth cubes were quickly developed and gained popularity in the market.</p>
+                </div>
+              </div>
+            </div>
+                        <div class="history-card " data-idx="1" id="histCard1">
+              <div class="history-card-inner">
+                <img id="histBgRef1" class="hist-bg-ref"
+                     src="/images/banner/UFDI-History-Timeline-BG-2.png"
+                     style="display:none" aria-hidden="true" alt="" />
+                
+                <div class="hist-peek-label">
+                  <span class="hist-peek-year">2006</span>
+                </div>
+                
+                <div class="hist-card-content ">
+                  <span class="hist-watermark">2006</span>
+                  <p class="hist-description-text">Offering a wide variety of delicious jelly flavors, MENU Jelly Powder Mixes earned the trust of consumers across different markets with its consistency and taste. Following this, the MENU Soups and Mixes was officially launched, and the brand continued to expand, gaining recognition for delivering rich flavors, convenience, and quality that satisfy consumer needs.</p>
+                </div>
+              </div>
+            </div>
+                        <div class="history-card " data-idx="2" id="histCard2">
+              <div class="history-card-inner">
+                <img id="histBgRef2" class="hist-bg-ref"
+                     src="/images/banner/UFDI-History-Timeline-BG-3.png"
+                     style="display:none" aria-hidden="true" alt="" />
+                
+                <div class="hist-peek-label">
+                  <span class="hist-peek-year">2010</span>
+                </div>
+                
+                <div class="hist-card-content ">
+                  <span class="hist-watermark">2010</span>
+                  <p class="hist-description-text">Secured partnerships with major supermarkets and grocery stores nationwide. Through consistent quality and consumer trust, the brand earned a strong presence in key retail accounts and became a trusted choice in the market.</p>
+                </div>
+              </div>
+            </div>
+                        <div class="history-card " data-idx="3" id="histCard3">
+              <div class="history-card-inner">
+                <img id="histBgRef3" class="hist-bg-ref"
+                     src="/images/banner/UFDI-History-Timeline-BG-4.png"
+                     style="display:none" aria-hidden="true" alt="" />
+                
+                <div class="hist-peek-label">
+                  <span class="hist-peek-year">2011</span>
+                </div>
+                
+                <div class="hist-card-content ">
+                  <span class="hist-watermark">2011</span>
+                  <p class="hist-description-text">Participated in food expos, livelihood activities, and events to showcase varieties of products. These participations broadened the market reach and growing demand in the industry. ULTRAFOOD DISTRIBUTORS INC. has been a proud member of HRAP, which allows them to stay connected with industry developments, best practices, and new trends.</p>
+                </div>
+              </div>
+            </div>
+                        <div class="history-card " data-idx="4" id="histCard4">
+              <div class="history-card-inner">
+                <img id="histBgRef4" class="hist-bg-ref"
+                     src="/images/banner/UFDI-History-Timeline-BG-5.png"
+                     style="display:none" aria-hidden="true" alt="" />
+                
+                <div class="hist-peek-label">
+                  <span class="hist-peek-year">2017</span>
+                </div>
+                
+                <div class="hist-card-content ">
+                  <span class="hist-watermark">2017</span>
+                  <p class="hist-description-text">Embraced digital transformation by introducing and selling our products through e-commerce platforms. This provides greater convenience for customers to access our products anytime and anywhere.</p>
+                </div>
+              </div>
+            </div>
+                        <div class="history-card " data-idx="5" id="histCard5">
+              <div class="history-card-inner">
+                <img id="histBgRef5" class="hist-bg-ref"
+                     src="/images/banner/UFDI-History-Timeline-BG-6.png"
+                     style="display:none" aria-hidden="true" alt="" />
+                
+                <div class="hist-peek-label">
+                  <span class="hist-peek-year">2022</span>
+                </div>
+                
+                <div class="hist-card-content ">
+                  <span class="hist-watermark">2022</span>
+                  <p class="hist-description-text">Established a new office building and warehouse designed to improve operational efficiency and support the growing team. This enhances our services, streamlines processes, and allows us to respond quickly to the needs of our clients and partners.</p>
+                </div>
+              </div>
+            </div>
+                        <div class="history-card " data-idx="6" id="histCard6">
+              <div class="history-card-inner">
+                <img id="histBgRef6" class="hist-bg-ref"
+                     src="/images/banner/UFDI-History-Timeline-BG-7.png"
+                     style="display:none" aria-hidden="true" alt="" />
+                
+                <div class="hist-peek-label">
+                  <span class="hist-peek-year">2024</span>
+                </div>
+                
+                <div class="hist-card-content ">
+                  <span class="hist-watermark">2024</span>
+                  <p class="hist-description-text">Our company is proud to hold the HALAL Registration Certificate issued by the Islamic Da&#039;wah Council of the Philippines (IDCP), reflecting our commitment to the highest standards of quality and ethical compliance. This affirms that our products comply with HALAL requirements, ensuring integrity and trust to our valued clients.</p>
+                </div>
+              </div>
+            </div>
+                      </div>
+        </div>
+      </div>
+
+      <div class="hist-timeline-wrap" id="histTimelineWrap">
+        <button id="histPrev" aria-label="Previous">&#8592;</button>
+
+        <div class="hist-page active-page" data-page="0">
+          <div class="hist-page-line"></div>
+                      <button class="hist-dot active" data-idx="0" aria-label="2005">
+              <span class="yr">2005</span>
+            </button>
+                      <button class="hist-dot " data-idx="1" aria-label="2006">
+              <span class="yr">2006</span>
+            </button>
+                      <button class="hist-dot " data-idx="2" aria-label="2010">
+              <span class="yr">2010</span>
+            </button>
+                      <button class="hist-dot " data-idx="3" aria-label="2011">
+              <span class="yr">2011</span>
+            </button>
+                  </div>
+
+        <div class="hist-page" data-page="1">
+          <div class="hist-page-line"></div>
+                      <button class="hist-dot" data-idx="4" aria-label="2017">
+              <span class="yr">2017</span>
+            </button>
+                      <button class="hist-dot" data-idx="5" aria-label="2022">
+              <span class="yr">2022</span>
+            </button>
+                      <button class="hist-dot" data-idx="6" aria-label="2024">
+              <span class="yr">2024</span>
+            </button>
+                  </div>
+
+        <button id="histNext" aria-label="Next">&#8594;</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="clients" class="uf-clients">
+  <div class="uf-clients-inner">
+
+    <div class="uf-clients-title reveal-up" id="clientsTitle">CLIENTS MAP</div>
+
+    <div class="uf-grid reveal-up">
+
+      
+      <div class="uf-legend" id="clientsLegend">
+
+        <div class="uf-legend-title" id="legendTitle">LEGEND</div>
+
+        
+        <div class="uf-legend-item" id="legendItemExporters">
+          <div class="uf-legend-row">
+            <span class="uf-legend-pin">
+              <svg viewBox="0 0 24 24" fill="#4a90d9"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <span class="uf-legend-label" id="legendLabelExporters">Exporters</span>
+          </div>
+        </div>
+
+        
+        <div class="uf-legend-item" id="legendItemCommissaries">
+          <div class="uf-legend-row">
+            <span class="uf-legend-pin">
+              <svg viewBox="0 0 24 24" fill="#f5c800"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <span class="uf-legend-label" id="legendLabelCommissaries">Commissaries &amp; Restaurants</span>
+          </div>
+        </div>
+
+        
+        <div class="uf-legend-item" id="legendItemInstitutional">
+          <div class="uf-legend-row">
+            <span class="uf-legend-pin">
+              <svg viewBox="0 0 24 24" fill="#e02020"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <span class="uf-legend-label" id="legendLabelInstitutional">Institutional</span>
+          </div>
+          <div class="uf-legend-subs">
+            <span>â€¢ Health Institutions</span>
+            <span>â€¢ Schools and Universities</span>
+            <span>â€¢ Government Agencies</span>
+          </div>
+        </div>
+
+        
+        <div class="uf-legend-item" id="legendItemFranchising">
+          <div class="uf-legend-row">
+            <span class="uf-legend-pin">
+              <svg viewBox="0 0 24 24" fill="#5ecb3e"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <span class="uf-legend-label" id="legendLabelFranchising">Franchising</span>
+          </div>
+        </div>
+
+        
+        <div class="uf-legend-item" id="legendItemCaterings">
+          <div class="uf-legend-row">
+            <span class="uf-legend-pin">
+              <svg viewBox="0 0 24 24" fill="#f5820a"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <span class="uf-legend-label" id="legendLabelCaterings">Caterings</span>
+          </div>
+        </div>
+
+        
+        <div class="uf-legend-item" id="legendItemSupermarkets">
+          <div class="uf-legend-row">
+            <span class="uf-legend-pin">
+              <svg viewBox="0 0 24 24" fill="#c966e0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <span class="uf-legend-label" id="legendLabelSupermarkets">Supermarkets</span>
+          </div>
+          <div class="uf-legend-subs">
+            <span>â€¢ National Key Accounts</span>
+            <span>&nbsp;&nbsp;â€“ SM</span>
+            <span>&nbsp;&nbsp;â€“ Puregold</span>
+            <span>â€¢ Local Key Accounts</span>
+            <span>&nbsp;&nbsp;â€“ Cash &amp; Carry</span>
+            <span>&nbsp;&nbsp;â€“ Unimart</span>
+            <span>â€¢ Other Leading Supermarkets</span>
+          </div>
+        </div>
+
+        
+        <div class="uf-legend-item" id="legendItemGeneralTrade">
+          <div class="uf-legend-row">
+            <span class="uf-legend-pin">
+              <svg viewBox="0 0 24 24" fill="#1fc8c8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <span class="uf-legend-label" id="legendLabelGeneralTrade">General Trade</span>
+          </div>
+        </div>
+
+        
+        <div class="uf-legend-item" id="legendItemDistributors">
+          <div class="uf-legend-row">
+            <span class="uf-legend-pin">
+              <svg viewBox="0 0 24 24" fill="#cccccc" stroke="#888" stroke-width="0.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <span class="uf-legend-label" id="legendLabelDistributors">Distributors</span>
+          </div>
+          <div class="uf-legend-subs">
+            <span>â€¢ Pharmacies</span>
+            <span>â€¢ Sari-Sari Stores</span>
+            <span>â€¢ Market Stalls</span>
+            <span>â€¢ Specialty Shops</span>
+            <span>â€¢ Cooperatives</span>
+            <span>â€¢ Canteens</span>
+          </div>
+        </div>
+
+        
+        <div class="uf-legend-item" id="legendItemOnlineShops">
+          <div class="uf-legend-row">
+            <span class="uf-legend-pin">
+              <svg viewBox="0 0 24 24" fill="#111111"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <span class="uf-legend-label" id="legendLabelOnlineShops">Online Shops</span>
+          </div>
+          <div class="uf-legend-subs">
+            <span>â€¢ Shopee</span>
+            <span>â€¢ Lazada</span>
+            <span>â€¢ TikTok Shop</span>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="uf-map-wrap">
+        <img
+          src="/images/banner/UFDI-Customer-and-Clients-Map.png"
+          alt="Customer and Clients Map"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="relative overflow-hidden"
+  style="--contact-bg: #79ce1b;">
+
+  <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full blur-[70px] -translate-x-1/3 translate-y-1/3 pointer-events-none" style="background:rgba(26,46,4,0.08);"></div>
+
+  <div class="reveal-up px-6 sm:px-10 lg:px-16" style="padding-top: 1px;">
+    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+
+      <div class="map-placeholder absolute inset-0 flex flex-col items-center justify-center gap-3 z-0 pointer-events-none select-none">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(26,46,4,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <span style="color:rgba(26,46,4,0.50); font-size:0.75rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;">Loading map&hellip;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-6 sm:px-8 relative z-10" style="padding-top: 16px; padding-bottom: 16px;">
+
+    <div class="reveal-up text-center mb-2 flex flex-col items-center gap-2">
+      <h2 class="contact-heading font-display text-2xl sm:text-3xl font-black">CONNECT WITH US!</h2>
+      <p class="contact-subtext text-sm">Hungry for answers? Let&#039;s cook something up together â€” send us a bite of your thoughts!</p>
+    </div>
+
+    <form
+      id="contactForm"
+      class="contact-form-card reveal-up td1 p-6 sm:p-8"
+      method="POST"
+      action="/contact/send"
+      data-submit-url="/contact/send"
+      data-page-slug="ultrafood"
+    >
+      <input type="hidden" name="_token" value="CWbYSMQ7bH7Pq9OKNpvjvo9DBh5TsPcALMnh0IGm" autocomplete="off">      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        <div class="flex flex-col gap-1.5">
+          <label class="contact-label">Company Name</label>
+          <input type="text" name="company" placeholder="e.g. Acme Corp" required class="contact-input" />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label class="contact-label">Industry</label>
+          <input type="text" name="industry" placeholder="e.g. Food &amp; Beverage" class="contact-input" />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label class="contact-label">Full Name</label>
+          <input type="text" name="name" placeholder="Your name" required class="contact-input" />
+        </div>
+
+        <div class="flex flex-col gap-1.5">
+          <label class="contact-label">Email Address</label>
+          <input type="email" name="email" placeholder="you@company.com" required class="contact-input" />
+        </div>
+
+        <div class="sm:col-span-2 flex flex-col gap-1.5">
+          <label class="contact-label">Message</label>
+          <textarea name="message" placeholder="Tell us about your inquiry..." required rows="4" class="contact-input" style="resize:none;"></textarea>
+        </div>
+
+      </div>
+
+      <div class="mt-5 flex justify-end">
+        <button type="submit"
+          class="contact-submit-btn inline-flex items-center gap-2 font-bold text-xs tracking-wide px-6 py-2.5 rounded-full transition-all duration-200 cursor-pointer border-0 hover:-translate-y-0.5">
+          Send Message &#8594;
+        </button>
+      </div>
+    </form>
+
+    <div id="formError" class="font-semibold text-sm mt-4 p-4 rounded-xl text-center" style="display:none; color:#8a1f11; background:rgba(180,44,22,0.10); border:1px solid rgba(180,44,22,0.25);">
+      Something went wrong. Please try again.
+    </div>
+
+    <div id="formSuccess" class="font-semibold text-sm mt-4 p-4 rounded-xl text-center" style="color:#1a2e04; background:rgba(26,46,4,0.10); border:1px solid rgba(26,46,4,0.22);">
+      Thank you! We&#039;ll be in touch soon.
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer class="ultrafood-footer">
+  <div class="ultrafood-footer-inner">
+    <div class="ultrafood-footer-contact">
+      <div class="ultrafood-footer-contact-row">
+        <div class="ultrafood-footer-brand">
+          <img src="/images/logo/65480775-6edc-4e3e-b8c4-f989fe69c17c.png" alt="Ultrafood logo" class="ultrafood-footer-logo" />
+        </div>
+        <div class="ultrafood-footer-contact-copy">
+          <h2 class="ultrafood-footer-contact-heading" data-ve-field="ultrafood_footer_contact_us_title">Contact Us</h2>
+          <p><strong data-ve-field="ultrafood_footer_contact_label">Contact Number:</strong> <span data-ve-field="ultrafood_footer_contact_number">+1 234 567 890</span></p>
+          <p><strong data-ve-field="ultrafood_footer_customer_service_label">Customer Service:</strong> <span data-ve-field="ultrafood_footer_customer_service_number">+1 234 000 111</span></p>
+          <p><strong data-ve-field="ultrafood_footer_email_label">Email:</strong> <a data-ve-field="ultrafood_footer_email" href="mailto:ultrafood05@google.com">ultrafood05@google.com</a></p>
+          <p><strong data-ve-field="ultrafood_footer_customer_email_label">Customer Service Email:</strong> <a data-ve-field="ultrafood_footer_customer_email" href="mailto:customerservice@menufood.com">customerservice@menufood.com</a></p>
+        </div>
+        <div class="ultrafood-footer-copy-wrap">
+          <p class="ultrafood-footer-copy">Â© 2026 Ultrafood Distributors Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<button id="backToTop" aria-label="Back to top"
+  class="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all cursor-pointer border-0 text-sm font-bold"
+  style="
+    --btt-bg: #4B7A08;
+    --btt-fg: #ffffff;
+    --btt-hover-bg: #1a2e04;
+  ">
+  &#8593;
+</button>
+
+
+
+<script src="/js/ultrafood.js"></script>
+<script>
+  (function () {
+    var cards = document.querySelectorAll('#brands .brand-card');
+    if (!cards.length) return;
+
+    cards.forEach(function (card) {
+      var clearTap = function () { card.classList.remove('is-tapped'); };
+      card.addEventListener('touchstart', function () { card.classList.add('is-tapped'); }, { passive: true });
+      card.addEventListener('touchend', function () { setTimeout(clearTap, 180); }, { passive: true });
+      card.addEventListener('touchcancel', clearTap, { passive: true });
+    });
+  })();
+</script>
+</body>
+</html>
+
+

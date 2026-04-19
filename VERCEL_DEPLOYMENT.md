@@ -1,27 +1,20 @@
 # Vercel Deployment
 
-This Laravel project needs PHP runtime configuration on Vercel. Without it, Vercel serves `public/index.php` as a static file and the browser downloads it.
+This repository deploys to Vercel as a static public showcase. The Laravel app is used locally to render the pages, then the generated HTML in `public/static` is deployed.
 
 The repository includes:
 
-- `vercel.json` to enable the community PHP runtime, route public assets, and send app routes to Laravel.
-- `api/index.php` as the Vercel serverless entry point.
-- `database/database.sqlite`, a pre-seeded showcase database for the public pages.
-- `excludeFiles` in `vercel.json` keeps large static image folders out of the PHP function bundle so it stays below Vercel's function size limit.
+- `public/static`, pre-rendered HTML for the public showcase pages.
+- `vercel.json`, clean URL routes that point to those static HTML files and static assets.
+- `scripts/export-static.ps1`, a local helper for regenerating the static HTML from Laravel.
+- `.vercelignore`, which uploads only `public` and `vercel.json` to Vercel so PHP/Composer is never bundled.
 
-After pushing these files, redeploy the project in Vercel. If Vercel asks for a framework preset, choose **Other**.
+After pushing these files, redeploy the project in Vercel. If Vercel asks for a framework preset, choose **Other**. Do not add a custom build command.
 
-For a public showcase, the included defaults are enough. For a real production site, set these in Vercel Project Settings -> Environment Variables instead of relying on the fallback values:
+To regenerate the static showcase locally after changing Laravel pages or seeded content:
 
-```text
-APP_KEY=base64:your-generated-key
-APP_ENV=production
-APP_DEBUG=false
-DB_CONNECTION=mysql
-DB_HOST=your-database-host
-DB_DATABASE=your-database-name
-DB_USERNAME=your-database-user
-DB_PASSWORD=your-database-password
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/export-static.ps1
 ```
 
-Vercel's filesystem is serverless, so admin uploads and persistent database edits need an external database/storage service. The free deployment is best for showcasing the public pages. Do not add a custom Vercel build command that calls `composer`; the PHP runtime builder handles Composer during function packaging.
+Vercel's free serverless function size limit is too small for this image-heavy Laravel project, so the deployed Vercel site is static. Admin pages, form submissions, PDF generation, uploads, and database edits require a PHP host or an external database/storage architecture.
