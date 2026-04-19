@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
             PageSeeder::class,
             MenuCategoryCalloutSeeder::class,
             ExistingResourcesSeeder::class,
+            DemoMenuContentSeeder::class,
+            NordicRecipesSeeder::class,
         ]);
     }
 }
