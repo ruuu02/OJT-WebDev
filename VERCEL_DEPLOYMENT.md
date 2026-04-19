@@ -6,7 +6,7 @@ The repository includes:
 
 - `vercel.json` to enable the community PHP runtime, route public assets, and send app routes to Laravel.
 - `api/index.php` as the Vercel serverless entry point.
-- A build command that creates and seeds `database/database.sqlite` for showcase data.
+- `database/database.sqlite`, a pre-seeded showcase database for the public pages.
 
 After pushing these files, redeploy the project in Vercel. If Vercel asks for a framework preset, choose **Other**.
 
@@ -23,4 +23,4 @@ DB_USERNAME=your-database-user
 DB_PASSWORD=your-database-password
 ```
 
-Vercel's filesystem is serverless, so admin uploads and persistent database edits need an external database/storage service. The free deployment is best for showcasing the public pages.
+Vercel's filesystem is serverless, so admin uploads and persistent database edits need an external database/storage service. The free deployment is best for showcasing the public pages. Do not add a custom Vercel build command that calls `composer`; the PHP runtime builder handles Composer during function packaging.

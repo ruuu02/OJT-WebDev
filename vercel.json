@@ -6,7 +6,6 @@
       "maxDuration": 10
     }
   },
-  "buildCommand": "composer install --no-dev --prefer-dist --optimize-autoloader && php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\" && php artisan migrate --force && php artisan db:seed --force",
   "routes": [
     {
       "src": "/favicon.ico",
