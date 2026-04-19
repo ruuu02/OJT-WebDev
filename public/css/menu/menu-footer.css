@@ -1,0 +1,242 @@
+/* Footer shell and overall color theme. */
+.menu-footer {
+  position: relative;
+  z-index: 30;
+  margin-top: 12px;
+  --shared-footer-height: 156px;
+  font-family: var(--font-glory);
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--primary, #820c0c) 16%, transparent 84%), transparent 28%),
+    linear-gradient(180deg, var(--menu-panel-bg-top, #fdfbf9) 0%, var(--menu-panel-bg-bottom, #f4ede6) 100%);
+  color: var(--menu-panel-heading, #223947);
+  border-top: 1px solid color-mix(in srgb, var(--primary, #820c0c) 30%, white 70%);
+}
+
+@media (max-width: 900px) {
+  .menu-footer {
+    --shared-footer-height: 330px;
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-footer {
+    --shared-footer-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-footer {
+    --shared-footer-height: 280px;
+  }
+}
+
+
+/* Footer grid columns for contact, social, and links. */
+.menu-footer-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 14px 20px;
+  min-height: var(--shared-footer-height);
+  height: var(--shared-footer-height);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) auto auto;
+  column-gap: 96px;
+  row-gap: 12px;
+  align-items: start;
+}
+
+
+/* Brand block inside footer. */
+.menu-footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.menu-footer-logo {
+  width: 128px;
+  height: 128px;
+  display: block;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.menu-footer-brand-text {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.menu-footer-tagline {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--menu-panel-text, #576b8a);
+}
+
+
+.menu-footer-contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.menu-footer-contact-row .menu-footer-brand {
+  margin-left: 0;
+}
+
+.menu-footer-contact-copy {
+  min-width: 0;
+  margin-left: 18px;
+}
+
+.menu-footer-contact .menu-footer-contact-title {
+  margin: 0 0 8px;
+  font-family: var(--font-glory);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--menu-panel-heading, #223947);
+}
+
+/* Contact text and link styles. */
+.menu-footer-contact p {
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--menu-panel-heading, #223947);
+}
+
+.menu-footer-contact .menu-footer-brand {
+  margin-bottom: 0;
+  flex: 0 0 auto;
+}
+
+.menu-footer-contact a,
+.menu-main-company-link {
+  color: var(--primary, #820c0c);
+  text-decoration: none;
+  transition: color 0.24s ease, opacity 0.24s ease;
+}
+
+.menu-footer-contact a:hover,
+.menu-main-company-link:hover {
+  color: #c70000;
+  text-decoration: underline;
+}
+
+
+/* Social section labels and icon buttons. */
+.menu-footer-social-title {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--menu-panel-heading, #223947);
+}
+
+#menuFooterFollowTitle {
+  margin-left: 0;
+  text-align: center;
+}
+
+
+.menu-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-social-link {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--menu-panel-bg-top, #fdfbf9) 0%, var(--menu-panel-bg-bottom, #f4ede6) 100%);
+  color: var(--primary, #820c0c);
+  border: 1px solid var(--menu-panel-border, #dfd2c5);
+  transition: background 0.24s ease, transform 0.24s ease, box-shadow 0.24s ease, color 0.24s ease;
+}
+
+.menu-social-link:hover {
+  background: linear-gradient(180deg, #c70000 0%, var(--primary, #820c0c) 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px color-mix(in srgb, var(--primary, #820c0c) 26%, transparent 74%);
+}
+
+.menu-social-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* External logo links to other pages. */
+.menu-footer-links {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-footer-brands-title {
+  margin-left: 0;
+  text-align: center;
+}
+
+.menu-footer-social {
+  justify-self: center;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-other-logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.menu-other-logo-link {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: none;
+  transition: transform 0.24s ease, opacity 0.24s ease, filter 0.24s ease;
+}
+
+.menu-other-logo-link:hover {
+  transform: translateY(-2px);
+  filter: saturate(1.03);
+}
+
+.menu-other-logo {
+  width: auto;
+  height: auto;
+  max-width: 110px;
+  max-height: 110px;
+  display: block;
+  object-fit: contain;
+}
+
+.menu-other-logo-link:last-child .menu-other-logo {
+  max-width: 96px;
+  max-height: 96px;
+}

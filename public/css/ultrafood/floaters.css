@@ -1,0 +1,134 @@
+/* Keep the visible content above the decorative floater bands. */
+#about .about-inner,
+#strengths > .max-w-6xl,
+#brands > .max-w-5xl,
+#mission .mv-two-col-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+/* Decorative floater overlays placed between Ultrafood sections. */
+.uf-floater-band {
+  --uf-band-size: clamp(170px, 18vw, 260px);
+  position: relative;
+  height: var(--uf-band-size);
+  margin: calc(var(--uf-band-size) * -0.5) 0;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 1;
+}
+
+.uf-floater {
+  position: absolute;
+  top: 50%;
+  width: min(68vw, 1040px);
+  max-width: calc(100vw - 24px);
+  transform: translate(var(--uf-floater-shift-x, 0), -50%);
+}
+
+.uf-floater-band--about {
+  --uf-floater-shift-x: 95px;
+}
+
+.uf-floater-band--about .uf-floater {
+  top: 68%;
+  width: min(64vw, 980px);
+}
+
+.uf-floater--left {
+  left: clamp(12px, 3vw, 56px);
+}
+
+.uf-floater--right {
+  right: clamp(12px, 3vw, 56px);
+}
+
+.uf-floater-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  filter: none;
+  opacity: 0.23;
+  will-change: opacity, transform;
+}
+
+.uf-floater-band--strengths .uf-floater {
+  top: 72%;
+  width: min(62vw, 960px);
+}
+
+.uf-floater-band--brands .uf-floater {
+  top: 68%;
+  width: min(60vw, 920px);
+}
+
+@media (max-width: 1023px) {
+  .uf-floater-band {
+    --uf-band-size: clamp(150px, 24vw, 230px);
+  }
+
+  .uf-floater {
+    width: min(82vw, 920px);
+    max-width: calc(100vw - 20px);
+  }
+
+  .uf-floater--left {
+    left: clamp(12px, 3vw, 48px);
+  }
+
+  .uf-floater--right {
+    right: clamp(12px, 3vw, 48px);
+  }
+
+  .uf-floater-band--strengths .uf-floater {
+    top: 74%;
+    width: min(78vw, 860px);
+  }
+
+  .uf-floater-band--brands .uf-floater {
+    top: 70%;
+    width: min(74vw, 820px);
+  }
+}
+
+@media (max-width: 767px) {
+  .uf-floater-band {
+    display: none;
+  }
+
+  .uf-floater-band {
+    --uf-band-size: clamp(132px, 30vw, 190px);
+  }
+
+  .uf-floater {
+    width: min(92vw, 560px);
+    max-width: calc(100vw - 16px);
+  }
+
+  .uf-floater--left {
+    left: 10px;
+  }
+
+  .uf-floater--right {
+    right: 10px;
+  }
+
+  .uf-floater-band--strengths .uf-floater {
+    top: 68%;
+    width: min(88vw, 520px);
+  }
+
+  .uf-floater-band--brands .uf-floater {
+    top: 64%;
+    width: min(86vw, 500px);
+  }
+}
+
+@media (max-width: 479px) {
+  .uf-floater {
+    width: min(96vw, 420px);
+  }
+}

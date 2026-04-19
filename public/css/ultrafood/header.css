@@ -1,0 +1,227 @@
+:root {
+  --spring-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --spring-snappy: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+#header {
+  left:            50% !important;
+  right:           auto !important;
+  transform:       translateX(-50%) translateY(0);
+  width:           100%;
+  background:      var(--header-bg, rgba(255, 255, 255, 0.97));
+  border-radius:   0;
+  box-shadow:      none;
+  backdrop-filter: blur(0px);
+  opacity:         1;
+  overflow:        visible; /* allow nav to breathe */
+  will-change:     width, border-radius, transform, opacity;
+  transition:
+    width           0.6s  var(--spring-out)  150ms,
+    border-radius   0.5s  var(--spring-out)  0ms,
+    box-shadow      0.4s  ease               0ms,
+    background      0.35s ease               0ms,
+    backdrop-filter 0.4s  ease               0ms,
+    transform       0.55s var(--spring-out)  0ms,
+    opacity         0.45s ease               0ms;
+}
+
+#header.scrolled {
+  width:           96%;
+  max-width:       1400px;
+  border-radius:   0 0 40px 40px;
+  box-shadow:
+    0 8px 32px rgba(26, 46, 4, 0.12),
+    0 2px 8px  rgba(26, 46, 4, 0.07);
+  background:      rgba(255, 255, 255, 0.99);
+  backdrop-filter: blur(12px);
+  overflow:        hidden;
+}
+
+#header.header-hidden {
+  transform:      translateX(-50%) translateY(-105%);
+  opacity:        0;
+  pointer-events: none;
+  transition:
+    width           0.6s  var(--spring-out)           150ms,
+    border-radius   0.5s  var(--spring-out)           0ms,
+    box-shadow      0.4s  ease                        0ms,
+    background      0.35s ease                        0ms,
+    backdrop-filter 0.4s  ease                        0ms,
+    transform       0.6s  cubic-bezier(0.4, 0, 1, 1) 0ms,
+    opacity         0.45s ease                        120ms;
+}
+
+/* ── Desktop nav links: never wrap ── */
+.nav-link {
+  position:    relative;
+  white-space: nowrap;
+  font-size:   0.8rem;
+  padding:     8px 10px;
+  letter-spacing: 0.03em;
+}
+
+.nav-link::after {
+  content:          '';
+  position:         absolute;
+  bottom:           -2px;
+  left:             50%;
+  transform:        translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width:            20px;
+  height:           2.5px;
+  background:       var(--green-dark);
+  border-radius:    3px;
+  transition:       transform 0.3s var(--spring-snappy);
+}
+
+.nav-link:hover::after,
+.nav-link.active-link::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ── Mobile nav ── */
+#mobileNav {
+  display:         flex;
+  flex-direction:  column;
+  max-height:      0;
+  overflow:        hidden;
+  opacity:         0;
+  pointer-events:  none;
+  border-top:      1px solid transparent;
+  transition:
+    max-height   0.5s  var(--spring-out) 0ms,
+    opacity      0.35s ease              60ms,
+    border-color 0.3s  ease              0ms,
+    padding      0.4s  var(--spring-out) 0ms;
+}
+
+#mobileNav.open {
+  max-height:     600px;
+  opacity:        1;
+  pointer-events: auto;
+  border-top:     1px solid rgba(26, 46, 4, 0.08);
+  padding:        8px 0 20px;
+}
+
+.mobile-nav-link {
+  position:        relative;
+  display:         inline-block;
+  align-self:      flex-start;
+  margin-left:     24px;
+  padding:         10px 4px;
+  font-size:       0.95rem;
+  font-weight:     600;
+  color:           #000000;
+  text-transform:  uppercase;
+  letter-spacing:  0.04em;
+  text-decoration: none;
+  white-space:     nowrap;
+}
+
+.mobile-nav-link::after {
+  content:          '';
+  position:         absolute;
+  bottom:           2px;
+  left:             50%;
+  transform:        translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width:            24px;
+  height:           2.5px;
+  background:       #000000;
+  border-radius:    3px;
+  transition:       transform 0.3s var(--spring-snappy);
+}
+
+.mobile-nav-link:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+#mobileNav .mobile-nav-link {
+  opacity:   0;
+  transform: translateX(-10px);
+  transition:
+    opacity   0.3s  ease,
+    transform 0.35s var(--spring-snappy);
+}
+
+#mobileNav.open .mobile-nav-link {
+  opacity:   1;
+  transform: translateX(0);
+}
+
+#mobileNav.open .mobile-nav-link:nth-child(1) { transition-delay: 0.04s; }
+#mobileNav.open .mobile-nav-link:nth-child(2) { transition-delay: 0.08s; }
+#mobileNav.open .mobile-nav-link:nth-child(3) { transition-delay: 0.12s; }
+#mobileNav.open .mobile-nav-link:nth-child(4) { transition-delay: 0.16s; }
+#mobileNav.open .mobile-nav-link:nth-child(5) { transition-delay: 0.20s; }
+#mobileNav.open .mobile-nav-link:nth-child(6) { transition-delay: 0.24s; }
+#mobileNav.open .mobile-nav-link:nth-child(7) { transition-delay: 0.28s; }
+
+#mobileNav:not(.open) .mobile-nav-link {
+  transition-delay: 0s !important;
+}
+
+.burger-bar {
+  display:       block;
+  width:         22px;
+  height:        2px;
+  background:    var(--green-dark);
+  border-radius: 2px;
+  transition:    transform 0.3s var(--spring-snappy), opacity 0.2s ease;
+}
+
+#burger.open .burger-bar:nth-child(1) { transform: translateY(6px)  rotate(45deg); }
+#burger.open .burger-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+#burger.open .burger-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* ══════════════════════════════════════
+   LANDSCAPE PHONES  568px – 900px
+   Force burger menu instead of desktop nav
+   so 7 links don't crowd a short wide screen
+══════════════════════════════════════ */
+@media (max-width: 900px) and (max-height: 500px) {
+  /* Hide desktop nav, show burger */
+  #header nav.hidden { display: none !important; }
+  #burger            { display: flex !important; }
+
+  #header .max-w-7xl { height: 56px !important; }
+  #header img.h-20   { height: 40px; }
+
+  #header.scrolled { width: 98%; }
+}
+
+/* ══════════════════════════════════════
+   TABLET  768px – 1100px
+   Desktop nav visible but compact
+══════════════════════════════════════ */
+@media (min-width: 768px) and (max-width: 1100px) {
+  #header img.h-20 { height: 48px; }
+
+  .nav-link {
+    font-size:      0.68rem !important;
+    padding:        6px 7px !important;
+    white-space:    nowrap;
+    letter-spacing: 0.02em;
+  }
+
+  #header.scrolled { width: 97%; max-width: 1400px; }
+}
+
+/* ══════════════════════════════════════
+   SMALL DESKTOP  1101px – 1280px
+══════════════════════════════════════ */
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .nav-link {
+    font-size: 0.75rem !important;
+    padding:   8px 9px !important;
+  }
+}
+
+/* ══════════════════════════════════════
+   MOBILE PORTRAIT  ≤ 767px
+══════════════════════════════════════ */
+@media (max-width: 767px) {
+  #header .max-w-7xl { height: 68px !important; }
+  #header img.h-20   { height: 46px; }
+  .mobile-nav-link   { margin-left: 20px; font-size: 0.88rem; }
+}

@@ -1,0 +1,196 @@
+.strengths-section {
+  background: var(--strengths-bg, #ffffff);
+  padding: 110px 0 72px;
+  position: relative;
+}
+
+.strengths-section h2 {
+  font-family: var(--font-heading) !important;
+  color: #000000 !important;
+  letter-spacing: -0.01em;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.strengths-heading {
+  margin-bottom: 56px;
+}
+
+.strengths-section .grid {
+  align-items: stretch;
+}
+
+.strengths-grid {
+  row-gap: 44px !important;
+}
+
+.strength-card-wrapper {
+  padding-top: 52px;
+}
+
+.strength-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(75,122,8,0.32);
+  border-radius: 20px;
+  padding: 60px 28px 34px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  transition: all .35s ease;
+}
+
+.strength-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.64);
+}
+
+.strength-icon {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  transition: transform .35s ease;
+}
+
+.strength-card:hover .strength-icon {
+  transform: translateX(-50%) translateY(-6px) scale(1.05);
+}
+
+.strength-card h4 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.05rem, 1.2vw, 1.25rem);
+  font-weight: 700;
+  color: #000000 !important;
+  margin: 0 0 14px 0;
+  min-height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 1024px) {
+  .strengths-grid {
+    row-gap: 22px !important;
+  }
+
+  .strength-card-wrapper {
+    padding-top: 48px;
+  }
+
+  .strength-card h4 {
+    white-space: nowrap;
+  }
+}
+
+.strength-card p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #000000 !important;
+  margin: 0;
+  max-width: 32ch;
+  flex: 1;
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .strengths-heading { margin-bottom: 44px; }
+  .strength-card { padding: 55px 24px 30px; }
+  .strength-icon { width: 90px; height: 90px; top: -45px; }
+  .strength-card h4 { white-space: normal; }
+  .strength-card p { flex: unset; }
+  .strength-card-wrapper { padding-top: 46px; }
+}
+
+@media (max-width: 767px) {
+  .strengths-section {
+    padding: 40px 0 24px;
+  }
+
+  .strengths-heading {
+    margin-bottom: 24px;
+  }
+
+  .strengths-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 12px !important;
+    row-gap: 0 !important;
+  }
+
+  .strength-card-wrapper {
+    padding-top: 44px;
+  }
+
+  .strength-card {
+    padding: 48px 12px 18px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1.5px solid rgba(75,122,8,0.32);
+  }
+
+  .strength-icon {
+    width: 66px;
+    height: 66px;
+    top: -33px;
+  }
+
+  .strength-card h4 {
+    font-size: 0.78rem;
+    min-height: 2.1rem;
+    margin-bottom: 8px;
+  }
+
+  .strength-card p {
+    font-size: 0.75rem;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .strengths-section {
+    padding: 40px 0 24px;
+  }
+
+  .strengths-heading {
+    margin-bottom: 24px;
+  }
+
+  .strengths-grid {
+    row-gap: 0 !important;
+  }
+
+  .strength-card-wrapper {
+    padding-top: 44px;
+  }
+
+  .strength-card {
+    padding: 55px 20px 30px;
+    background: #ffffff;
+    border: 1.5px solid rgba(75,122,8,0.32);
+  }
+
+  .strength-icon {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+  }
+
+  .strength-card h4 {
+    font-size: 0.95rem;
+    min-height: 2.4rem;
+    margin-bottom: 10px;
+  }
+
+  .strength-card p {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+}

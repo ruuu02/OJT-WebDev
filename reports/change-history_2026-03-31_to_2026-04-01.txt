@@ -1,0 +1,298 @@
+﻿f3572a807f22a6c624d62a4c0a8227eb9cba43f6
+2026-04-01T18:24:26+08:00
+ultrafood05
+updated
+
+M	app/Http/Controllers/ContactController.php
+M	config/cms.php
+A	database/migrations/2026_04_01_000001_create_contact_form_submissions_table.php
+M	public/js/ultrafood.js
+A	resources/views/frontend/contact-form-submission-email.blade.php
+M	resources/views/frontend/menu-footer.blade.php
+M	resources/views/frontend/partials/nordic-footer.blade.php
+M	resources/views/frontend/ultrafood.blade.php
+
+287b69ba6be9c0a98e6a3e3af99aebcf7a39ad7e
+2026-04-01T16:28:05+08:00
+ultrafood5
+menustorelink
+
+D	public/images/banner/L3n2YgAIbOBCuot2aTYOlxKxGGnAGAJrctIAeXy1.jpg
+A	public/images/banner/cIuefJ29uUf9tdAzTVHudPQSd8k4f9jQJrO3o3TQ.jpg
+A	public/images/banner/hIL9z7Y9WN7LoPLDfoVtMn9A4KMAvVgkoFBP1e9F.jpg
+D	public/images/banner/kyzNy6qdrY0ofkjJSWa2zCklU5Kk2G9fOnuKYDS8.png
+
+e179d15b7395e4ca526c817d22173dcae9b8c4b3
+2026-04-01T15:33:38+08:00
+ultrafood05
+labyu ann
+
+M	public/css/ultrafood/hero.css
+M	public/css/ultrafood/history.css
+M	public/css/ultrafood/responsive.css
+M	public/js/ultrafood.js
+
+11e8b8bf9474038c8b0a6cb2d0f2dba918a7b76c
+2026-04-01T15:31:20+08:00
+ultrafood05
+menunordic
+
+M	public/css/nordic/nordic-recipes.css
+M	public/css/shared/connect-with-us.css
+
+098cf68ec8079e421e9938255e91b521085ed04f
+2026-04-01T15:10:00+08:00
+ultrafood05
+menuonproccesssss
+
+35d6b0854bea9309bb9ff574dc030db180a8c46d
+2026-04-01T15:09:26+08:00
+ultrafood05
+meniongoing
+
+A	public/css/menu/menu-connect.css
+M	public/css/menu/menu-responsive.css
+M	public/css/nordic/nordic-products.css
+M	public/css/nordic/nordic.css
+A	public/css/shared/connect-with-us.css
+A	public/images/logo/OneWorld-Horizontal-Logo.png
+M	public/js/nordic.js
+M	public/js/nordic/nordic-products.js
+M	resources/views/frontend/menu-recipe-category.blade.php
+M	resources/views/frontend/menu-recipe-detail.blade.php
+M	resources/views/frontend/menu.blade.php
+M	resources/views/frontend/nordic.blade.php
+A	resources/views/frontend/partials/connect-with-us-menu.blade.php
+A	resources/views/frontend/partials/connect-with-us.blade.php
+
+a422c2ec2f64d14616860d6b9e7c876e6edced65
+2026-04-01T15:01:07+08:00
+ultrafood5
+shopeemall
+
+M	app/Http/Controllers/MenuCategoryItemController.php
+M	public/css/menu/menu-products.css
+M	public/js/admin/visual-editor.js
+M	resources/views/admin/visual-editor.blade.php
+M	resources/views/frontend/menu-category-item-detail.blade.php
+
+02c92c2b0e4a85ce01c9d1e74824ce62d1759b61
+2026-04-01T13:42:10+08:00
+ultrafood5
+fixed@features
+
+079055af466ff5575d6eec46a318aa4c08d99536
+2026-04-01T13:41:31+08:00
+ultrafood5
+add@features
+
+M	app/Http/Controllers/AdminController.php
+M	app/Http/Controllers/FrontendController.php
+M	public/css/admin/visual-editor.css
+M	public/js/admin/visual-editor.js
+M	resources/views/admin/visual-editor.blade.php
+M	resources/views/frontend/menu-recipe-detail.blade.php
+M	resources/views/frontend/nordic-recipe-details.blade.php
+
+8b8c20a76195b43c718f1f6bc84cec2ef4c81028
+2026-04-01T13:34:06+08:00
+ultrafood05
+labyu ann
+
+M	public/css/ultrafood/brands.css
+M	public/css/ultrafood/hero.css
+M	public/css/ultrafood/history.css
+M	public/css/ultrafood/mission.css
+M	public/css/ultrafood/strengths.css
+A	public/images/menu/DLMzlclG4lNSGoqOmeeGNKV69aqmwG4eb9tdQurk.jpg
+A	public/images/menu/EMaDELQIhQudBhcJr5WsGNgnfGBJaR4ZvWDBvP9R.jpg
+A	public/images/menu/JGXjyto6IetO7P6j4tk3X9JxKOxm1i32p3DoOdSr.jpg
+A	public/images/menu/LAPmGQq2WZzSQy1fgW9HLsqMU3ogLlwhTD3z1tuG.jpg
+A	public/images/menu/MfS78QYEL19i7rfzaxIPVFKTykqMafImssVmeOhZ.jpg
+A	public/images/menu/RB5vTA6L3CZrn6mINY5pKGjfHkofUH6kKX2L4tDI.jpg
+A	public/images/menu/aSVXFPBPqOSqLGHYw58z9evhq45DMEsHV1piZW4M.jpg
+A	public/images/menu/e3zn5mld33JNh7jdrjKegArG6FvQOLfB24jsVmCj.jpg
+A	public/images/menu/mhV99mfiv4BG9gcga2qe05nbZMuPEFfQaxk9xjLt.jpg
+A	public/images/menu/sa9j6Z0SnpI3scFLQC3oWh9JK8prod6ypGvSbkYL.jpg
+A	public/images/nordic/recipes/27jUxlnTLFbd4qcA2INKYSJ3ZZkqHxflSglvSCUF.jpg
+A	public/images/nordic/recipes/D8OQoOSaiMpCsJu9F7BvaE5fLUTAeUkd6JbGPTjG.jpg
+A	public/images/nordic/recipes/Ix4nFQrT1Vo6pYcZ80deMN5dAMnvc1kMwFnlnmzl.jpg
+A	public/images/nordic/recipes/JYFvBKQAcNyMaFoMNK3ZZJ4I8P4JXm9UZ3Y5Ky4L.jpg
+A	public/images/nordic/recipes/LXKgmRLy1xhoKN9HDkB44FY0vxREr3z3tgspWlH9.jpg
+D	public/images/nordic/recipes/LkN8AVQ19FzQmfKTZgV0daPx0uKv4c9AXuwLWkNE.png
+A	public/images/nordic/recipes/LkerzZIbFOVylz3NsfW0HiawNJf6E1Z9jJXm6qLa.jpg
+A	public/images/nordic/recipes/a4bw0blwXgEOCfFWLMfLxT467nFBMBIBoAaQz9dD.jpg
+D	public/images/nordic/recipes/affzcox5us0KDcMjmaLuCUTEWlWFcTYIbtb5uHhu.png
+A	public/images/nordic/recipes/b0apw19rLysTUfAHgkvsnUujfB9mxy1RcWH5yp5O.jpg
+A	public/images/nordic/recipes/bJ0CW4cWDHdjo9f94DMPz9yhOFfszu4cX0dIxmAz.jpg
+A	public/images/nordic/recipes/joK22tiAMoTxAxiOcvsvBwvZksOIUhOuXpOf8PuC.jpg
+A	public/images/nordic/recipes/o33ViQp3GFFn3CmJqLwjTuaRPpLccu92JzjdmRBg.jpg
+A	public/images/nordic/recipes/poxQK9254FmN4dmPXc4H94d23zSyR6Bf3Rkdkkeu.jpg
+A	public/images/nordic/recipes/rj76N9p0JNEic0kOumUDXjNwuFUWnr7tuT1k4NOQ.jpg
+A	public/images/nordic/recipes/sD94TNfSdSAoYxFMAXKIDFfzlCwW2bXtn9i2alLo.jpg
+A	public/images/nordic/recipes/t67B7Nlwqg8vtua1mLOdtuNS5HcQBsIvfgFPidvO.jpg
+A	public/images/nordic/recipes/vECA0zWll1LCg3SPvKn9pcTRO7fH8oqCWBoWYErz.jpg
+A	public/images/nordic/recipes/yGQhoBeIS86KGLJD5e0mqL49qz1WzC1qJeXC4tlu.jpg
+M	public/js/admin/visual-editor.js
+M	public/js/ultrafood.js
+
+ea5653bb9a5e1db8191e7d2e2cae6b23b9073a9a
+2026-04-01T11:51:39+08:00
+ultrafood05
+updated
+
+cb6c841ffcaa4d11a0a4ff1e8a0d9134ac48d0f1
+2026-04-01T11:50:10+08:00
+ultrafood05
+labyu ann
+
+M	public/css/ultrafood/about.css
+M	public/css/ultrafood/brands.css
+M	public/css/ultrafood/hero.css
+M	public/css/ultrafood/history.css
+M	public/css/ultrafood/mission.css
+M	public/css/ultrafood/responsive.css
+M	public/css/ultrafood/strengths.css
+D	public/images/banner/5Vz6lGO5qHQTimaoDQeokud2RDDvUujje290ZUJj.png
+D	public/images/banner/IEj0u9cAn4g4pgEao7vhkjTBdcSCNlZBJy2UIzh0.png
+D	public/images/banner/izvfgJHmrNUmVLYd23uDd2A1bEt6k9UocRNiSypT.jpg
+D	public/images/banner/jW4ceq8WoH6LqWwhZLZqJHQM8srbQGjxf1kFNzb2.png
+D	public/images/banner/mIvpzWL4Z6Gu66j7bnuSmE5PGWaTphX3JWGj2OEp.png
+D	public/images/banner/rKvEQ2tqkHsLaabWtjiyfIvsS9GXzewfxquGLSiX.jpg
+A	public/images/menu/0TxvuoePrlxkI6tLg4xADIy6V8fSpTa2GU4Ew9v5.jpg
+A	public/images/menu/3UnMT8xjqi4bbT3I6qmI8J6yA9K4OUG4KqvsdUmG.jpg
+D	public/images/menu/9c3njgjk6hUjCK8hSinaDFz0deDQWfjAtUcZVzzD.png
+A	public/images/menu/CWDYjxwyHaM6LoV71GlzXd1egUXnWDUa5arkWseM.jpg
+A	public/images/menu/EdTE6n427J3geccNlN58R1el338g55anB1tzErtX.jpg
+A	public/images/menu/IyR1GYn1zBTQBWzq3zm0q8c7BNRTJo7qpOJZxc42.jpg
+A	public/images/menu/LqhB11kDdJIRetWqOxj55fNwBcGZHhkDNzPvMnDS.jpg
+A	public/images/menu/MZhmfkul03dBlJDuxtEZFjtQ6UpDCXep5bRdusDe.jpg
+A	public/images/menu/PxEbLc9dhv93HFQczkvSrYfYC9aoOeMhICsmBOe1.jpg
+A	public/images/menu/QgSdPRsjNWvkxMCwKPx7JiP0azWYqL6uavd7AQzV.jpg
+A	public/images/menu/RbS7HFG9eFt9NgYZ5RqDaJknh3JlvZ2DHeqDdbhw.jpg
+A	public/images/menu/UDqroB4Awf2msmJkqGydXE9d2cfPk2J5XR8YaGl9.jpg
+A	public/images/menu/Uy8Luj2FaGQPTXzJxkMz3skawqMtbdF9pI2shvNs.jpg
+A	public/images/menu/Vk5ttyW32pfWM8MiTXuosOflac8i7KlFhAtZNUN8.jpg
+A	public/images/menu/cKI7FvqNwL42KDejCRHbZe7iaINxHH0jtDxOk6cV.jpg
+A	public/images/menu/ebLjQq30w69Zdr8YOXgCqflWtUoApu1ianzTEc0G.jpg
+A	public/images/menu/iA4QMeIsZo2nOBckzuI8IigYMTx3YrOObyJcP7Og.jpg
+A	public/images/menu/kMhMeArDGUFavZRFVLkmkYLa7T3nj1I7NBPYFv38.jpg
+A	public/images/menu/lFL3p3Nf6So90LMJl5i5DA3JCWVNZIyrQk35oBh1.jpg
+A	public/images/menu/ljuEUBwGOgF10jklhjdNPmtzwkTwnMUkoWOxhcoB.jpg
+A	public/images/menu/mPzoHNqjlb6eHP74JS8XNVWoEsdgYG4FQzswNQve.jpg
+A	public/images/menu/oDfAnY2RikMgZyUNsnn6krckFKJ0tAxMzttN0YlN.jpg
+A	public/images/menu/qwJBt82Mpag1HYjOLZJWjPd6VLnTbkSuOCD8RypI.jpg
+A	public/images/menu/rzlRD9SezSPfq49o1mwbXDFuMtSvEvbEXaNMEQMY.jpg
+A	public/images/menu/sYqz7IXPIDWVdU8cT0TzXU5a45jbebPe52rc7RUp.jpg
+A	public/images/menu/sx06VAhZXwIcEZ8FEnmUzMRhc3zeiDHZZDrU75Ml.jpg
+A	public/images/menu/wc9j4GaC1GRX7QK1O8d05RkpgqlirrvOvtbZUGKu.jpg
+D	public/images/menu/xKXZ1IZ8Zdzxq7WgIsEBDr28yJkWOh3XIiSSjlQF.jpg
+A	public/images/menu/y7RKwfi8zSLMhsvL9xf1yESc1uxTLPX7HExEUi6q.jpg
+A	public/images/menu/zDgy8vd3hV7ed9XGRVsWrCr0fY6wq8KFWP3PaPNN.jpg
+A	public/images/menu/zgQYUWatUxRkRfGGnjaDhSm6Q5SgAI07n9aYrkYB.jpg
+A	public/images/menu/zvZXU0Txbs2BIiq9avxLNNanltmUpgkeNF33yVQt.jpg
+M	public/js/ultrafood.js
+M	resources/views/frontend/ultrafood.blade.php
+
+bda40def1042239879d1fb44ae199ed60c5041d2
+2026-04-01T11:45:57+08:00
+ultrafood5
+fixedheadermemnuvisual addoptionlevel
+
+M	config/cms.php
+M	public/css/admin/visual-editor.css
+M	public/js/admin/visual-editor.js
+M	resources/views/admin/visual-editor.blade.php
+M	resources/views/frontend/ultrafood.blade.php
+
+d78a1e0f9b689aa3e2cc1eaaebc5a82ac7943ca5
+2026-03-31T19:01:47+08:00
+ultrafood05
+menuongoing
+
+M	app/Http/Controllers/MenuRecipeController.php
+M	public/css/menu/menu-recipe-detail.css
+M	public/css/menu/menu-responsive.css
+A	public/images/banner/L3n2YgAIbOBCuot2aTYOlxKxGGnAGAJrctIAeXy1.jpg
+A	public/images/menu/3hkdrsgR6DIbktEqjjSBR1SI6CcSNxJre6szHlAQ.jpg
+A	public/images/menu/3l1l4zeDBXqUjhZSgItlmDqXKAhODbPFQjBLylQB.jpg
+A	public/images/menu/5NKgDT1Hir5nq5jbdYTim1t86SrIOKNLp2s5tyaQ.jpg
+A	public/images/menu/9h0SXPtxBvBPcmtnekrRHoAcBXziphgQhMQx9gtY.jpg
+A	public/images/menu/DJM2FDzA91kdgzvhCt9g7oUCA7vV5lfgbIkvkKWF.jpg
+A	public/images/menu/FWcu7ZjzBShfziDKU4HNNaSPOB69VDzhpoHPBgYS.jpg
+A	public/images/menu/FrSL13VtffLJl9vbiNKC0ZiKyBWeTEmgXnOKEVkt.jpg
+A	public/images/menu/FuY0t5hTcdNQtv2GSLHjjGlET6Tz6chFjKJN0KNg.jpg
+A	public/images/menu/LAlmeasT1tpkx3uR2LdMJtqyB8XjXB3Ytc3l05dB.jpg
+A	public/images/menu/LVWRcfp1QpMaKAeXWIEpoRGaCUrxYGP1OiuRi9Rn.jpg
+A	public/images/menu/OVhwPBGhDnmxHWX7zUY3ytKSlt8Vku1yiIjW1PTL.jpg
+A	public/images/menu/Q7m4fnXZH9L6KibgyYUMv2OVC8wIHVzS6PYKx4CK.jpg
+A	public/images/menu/WCM6nGsnMn7sAY5CiFpZdVEQ1icL8ochMKtZetBk.jpg
+A	public/images/menu/XioVD5PlPupKkWSPOlxi09QG00kLNpCKwfwU2cjo.jpg
+A	public/images/menu/YDxiaJ1K5837gc05ALwKn7A927vj5sA5YXgjIqiE.jpg
+A	public/images/menu/Yp9IacD9GFko9JWynsMkgC74GGf90xNErsOZ60ad.jpg
+A	public/images/menu/ZEtkzvofaV1kdkz9Cme1DqflbGSYHZBdfBukI3Gs.jpg
+A	public/images/menu/ZqlUV3fKjZFcKUzCeiuDd8m7R7TL8FkMTk32c8qg.jpg
+A	public/images/menu/d0I7If2fQjLok687Kh6a28qyuwzIQ2j7UPjYCjUP.jpg
+A	public/images/menu/dRbBF72VOWLE4dm4L9i8ZCLKY3bP8L35nAO0H0HM.jpg
+A	public/images/menu/dVg95VG8ecctTGz9Wcuv4lpTlERGdzeYTRoDSY46.jpg
+A	public/images/menu/gY41uvdcHsQkxYhNA8TbnUGOoTkY59dXyenypiiE.jpg
+A	public/images/menu/hJPw5XufrsmYGX8EGFsx3DFesaIQu2TjjUmMn3sR.jpg
+A	public/images/menu/hocnkmNql4JIAyzQybRqUbycc8d4BJI3OuhMEABb.jpg
+A	public/images/menu/k88beqBaIvihweJ7Rhl2cd2kNBYeK0YJpfMVz5hE.jpg
+A	public/images/menu/n2Jp1LSoiLVHPdmRUfjWEqICRzo8lVF0mLkWlEPI.jpg
+A	public/images/menu/pY5ss0x6sPyv5onRUc9auj8w6TgsyL7bWgt0ikwY.jpg
+A	public/images/menu/qVtCeHnoitEFzChE3GtpULb5vmMxP7r3AYGO2j6e.jpg
+A	public/images/menu/twiJIJY49ZoVXPRFrB7PZnKuzBl9S06nZEmxsW9K.jpg
+A	public/images/menu/ufSFu9njcloLAotQrlD9wT4rtetHKyLN5yqgCObX.jpg
+A	public/images/menu/xOlM9RF3BYAuTit2bN8X3ICXV0CExeaVGcFKfsPS.jpg
+M	public/js/admin/visual-editor.js
+M	resources/views/frontend/menu-recipe-category.blade.php
+M	resources/views/frontend/menu-recipe-detail.blade.php
+
+0ace169156e88ff98550ffd334ea798e8a67c2b8
+2026-03-31T16:24:13+08:00
+ultrafood05
+nordicfooterquery
+
+a8d695075d7ee11cd92de3361fb375f659701af3
+2026-03-31T16:23:18+08:00
+ultrafood05
+nordicfooterquerry
+
+M	public/css/menu/menu-category-grid.css
+M	public/css/menu/menu-category.css
+M	public/css/menu/menu-responsive.css
+M	public/css/nordic/nordic.css
+
+9d1195ba868f45a34a8d0b351791c41d49aa93f7
+2026-03-31T16:21:57+08:00
+ultrafood5
+fixed recipe details/pastas img
+
+M	app/Http/Controllers/MenuCategoryItemController.php
+M	app/Http/Controllers/MenuRecipeController.php
+M	app/Models/MenuRecipe.php
+M	config/cms.php
+A	database/migrations/2026_03_31_120000_add_difficulty_to_menu_recipes_table.php
+M	public/css/admin/visual-editor.css
+M	public/css/menu/menu-category-grid.css
+A	public/css/menu/menu-recipe-detail.css
+M	public/css/menu/menu.css
+M	public/js/admin/visual-editor.js
+M	resources/views/admin/visual-editor.blade.php
+M	resources/views/frontend/menu-category-landing.blade.php
+M	resources/views/frontend/menu-recipe-detail.blade.php
+
+33a4c04ac8aef1e3a8ee8633064adf485f8cbcdd
+2026-03-31T10:24:12+08:00
+ultrafood05
+menurevisionsemi
+
+M	public/css/menu/menu-category.css
+M	public/css/menu/menu-responsive.css
+M	public/css/nordic/nordic-recipe-details.css
+M	public/css/nordic/nordic.css
+M	public/js/menu.js
+M	resources/views/frontend/menu-recipe-detail.blade.php
+M	resources/views/frontend/nordic-recipe-details.blade.php
+M	resources/views/frontend/partials/nordic-header.blade.php

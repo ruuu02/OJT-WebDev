@@ -1,0 +1,240 @@
+#brands {
+  background: var(--brands-bg, #ffffff);
+  padding: 80px 0;
+}
+
+#brands h2 {
+  font-family: var(--font-heading) !important;
+  color: #000000 !important;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.01em;
+  font-style: normal;
+}
+
+#brands h2 span {
+  font-style: normal;
+  font-weight: 900;
+  color: #000000;
+}
+
+.brand-img-wrap {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  min-height: 160px;
+}
+
+.brand-img-wrap img {
+  max-height: 160px;
+  max-width: 85%;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+  object-position: center;
+  transition: transform .6s ease;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+#brandMenuCard .brand-img-wrap img {
+  max-height: 140px !important;
+  max-width: 85% !important;
+}
+
+#brandMenuCard .brand-img-wrap {
+  overflow: visible;
+  padding: 24px;
+}
+
+#brandMenuCard .brand-menu-logo {
+  display: block;
+  width: auto !important;
+  max-width: 85%;
+  height: auto !important;
+  object-fit: contain;
+}
+
+#brandNordicCard .brand-nordic-logo {
+  max-height: 124px !important;
+  max-width: 85% !important;
+  height: auto !important;
+  object-fit: contain;
+  transform: translateY(-10px);
+}
+
+.brand-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.18) !important;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.66) !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.brand-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(18%);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.brand-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+#brandMenuCard::before {
+  background-image: url('/images/menu/Menu-Background-New.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#brandNordicCard::before {
+  background-image:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.42) 0%, rgba(248, 250, 252, 0.5) 100%),
+    url('/images/nordic/Korpala-Nordic-Background.png');
+  background-size: cover;
+  background-position: center;
+  filter: none;
+}
+
+#brandMenuCard:hover::before,
+#brandMenuCard:focus-within::before,
+#brandNordicCard:hover::before,
+#brandNordicCard:focus-within::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.brand-card:hover .brand-img-wrap img {
+  transform: scale(1.06) !important;
+}
+
+.brand-img-wrap:hover img,
+.brand-img-wrap img:hover,
+.brand-img-wrap:focus-within img {
+  transform: scale(1.06) !important;
+}
+
+#brands .brand-card:focus-within .brand-img-wrap img,
+#brands .brand-card:active .brand-img-wrap img {
+  transform: scale(1.06) !important;
+}
+
+.brand-card h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.35rem !important;
+  color: #000000 !important;
+}
+
+.brand-card p {
+  font-family: var(--font-body);
+  font-size: 0.84rem !important;
+  line-height: 1.65;
+  color: #000000 !important;
+}
+
+#brandMenuCard:hover h3,
+#brandMenuCard:hover p,
+#brandMenuCard:focus-within h3,
+#brandMenuCard:focus-within p {
+  color: #000000 !important;
+}
+
+#brandNordicCard:hover h3,
+#brandNordicCard:hover p,
+#brandNordicCard:focus-within h3,
+#brandNordicCard:focus-within p {
+  color: #000000 !important;
+}
+
+.brand-card:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .brand-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.18) !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.66) !important;
+  }
+
+  .brand-card:active .brand-img-wrap img,
+  .brand-card.is-tapped .brand-img-wrap img,
+  .brand-img-wrap:active img {
+    transform: scale(1.06) !important;
+  }
+
+  .brand-card:active,
+  .brand-card.is-tapped {
+    background-color: rgba(255, 255, 255, 0.40) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-card {
+    transition: none;
+  }
+}
+
+@media (max-width: 479px) {
+  #brands { padding: 24px 0 52px; }
+  #brands .max-w-5xl { padding: 0 16px; }
+  #brands .reveal-up.text-center { margin-bottom: 16px !important; }
+  #brands h2 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  #brands .grid { gap: 12px !important; }
+  .brand-img-wrap { padding: 16px 10px; min-height: 92px; height: auto !important; }
+  .brand-img-wrap img { max-height: 68px; max-width: 90%; }
+  #brandMenuCard .brand-img-wrap img { max-height: 66px !important; }
+  #brandNordicCard .brand-nordic-logo { max-height: 64px !important; transform: translateY(-4px); }
+  #brandMenuCard .brand-img-wrap { padding: 12px 8px; }
+  .brand-card h3 { font-size: 0.92rem !important; line-height: 1.2; }
+  .brand-card p { font-size: 0.7rem !important; line-height: 1.35; }
+  .brand-card .px-6 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  #brands { padding: 28px 0 56px; }
+  #brands .max-w-5xl { padding: 0 20px; }
+  #brands .reveal-up.text-center { margin-bottom: 18px !important; }
+  #brands .grid { gap: 14px !important; }
+  .brand-img-wrap { min-height: 120px; height: auto !important; padding: 20px 12px; }
+  .brand-img-wrap img { max-height: 86px; }
+  #brandNordicCard .brand-nordic-logo { max-height: 82px !important; transform: translateY(-5px); }
+  .brand-card h3 { font-size: 1.02rem !important; }
+  .brand-card p { font-size: 0.76rem !important; line-height: 1.45; }
+  .brand-card .px-6 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #brands { padding: 72px 0; }
+  .brand-img-wrap { min-height: 180px; height: auto !important; }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #brands { padding: 80px 0; }
+}

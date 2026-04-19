@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Preview - Contact Inquiry</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green-dark:#1f4d15;
+      --green-base:#2d6a1f;
+      --green-light:#a8d88a;
+      --green-pale:#e6f3de;
+      --green-surf:#f5f9f2;
+      --green-border:#d4e6c8;
+      --text-dark:#1a2e14;
+      --text-mid:#3a5430;
+      --text-muted:#5a7a50;
+      --text-faint:#7a9a6a;
+      --white:#ffffff;
+      --font-display:Georgia, serif;
+      --font-body:"Segoe UI", Tahoma, Arial, sans-serif;
+    }
+    body {
+      font-family: var(--font-body);
+      background:#eef4ea;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:28px 14px;
+    }
+    .wrap {
+      width:100%;
+      max-width:680px;
+      background:var(--white);
+      border:.5px solid var(--green-border);
+      border-radius:6px;
+      overflow:hidden;
+    }
+    .hdr {
+      background:#ffffff !important;
+      border-bottom:.5px solid var(--green-border);
+      padding:20px 28px;
+      display:block;
+    }
+    .brand-logo {
+      width:auto;
+      max-width:132px;
+      height:30px;
+      object-fit:contain;
+      object-position:left center;
+      display:block;
+    }
+    .brand-text {
+      color:var(--text-dark);
+      font-size:13px;
+      font-weight:600;
+      letter-spacing:.09em;
+      line-height:1.35;
+      text-transform:uppercase;
+    }
+    .brand-text small {
+      display:block;
+      font-size:10px;
+      font-weight:400;
+      color:var(--text-muted);
+      letter-spacing:.14em;
+    }
+    .hdr-badge {
+      background:var(--green-dark);
+      color:#ffffff;
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.1em;
+      padding:5px 13px;
+      border-radius:2px;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .eyebrow {
+      background:var(--green-surf);
+      border-bottom:.5px solid var(--green-border);
+      padding:18px 28px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .eyebrow-title {
+      font-family:var(--font-display);
+      font-size:24px;
+      font-weight:400;
+      color:var(--text-dark);
+      letter-spacing:-.01em;
+    }
+    .eyebrow-sub {
+      font-size:12px;
+      color:var(--text-muted);
+      margin-top:3px;
+      letter-spacing:.03em;
+    }
+    .status-pill {
+      background:var(--green-pale);
+      color:var(--green-base);
+      font-size:10.5px;
+      font-weight:600;
+      letter-spacing:.09em;
+      padding:5px 13px;
+      border-radius:2px;
+      border:.5px solid var(--green-light);
+      text-transform:uppercase;
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+    .section {
+      padding:24px 28px;
+      border-bottom:.5px solid var(--green-border);
+    }
+    .section:last-of-type { border-bottom:none; }
+    .sec-label {
+      font-size:10px;
+      font-weight:600;
+      color:var(--green-base);
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .sec-label::after {
+      content:'';
+      flex:1;
+      height:.5px;
+      background:var(--green-border);
+    }
+    .avatar {
+      width:56px;
+      height:56px;
+      min-width:56px;
+      border-radius:50%;
+      background:var(--green-dark);
+      border:2px solid var(--green-light);
+      display:inline-block;
+      color:#ffffff;
+      font-size:17px;
+      font-weight:700;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      line-height:52px;
+      text-align:center;
+    }
+    .avatar-name { font-size:17px; font-weight:500; color:var(--text-dark); line-height:1.3; }
+    .avatar-email { font-size:12px; color:var(--text-muted); margin-top:2px; }
+    .field-row {
+      display:grid;
+      grid-template-columns:130px 1fr;
+      gap:8px;
+      padding:7px 0;
+      border-bottom:.5px solid #f0f6ea;
+    }
+    .field-row:last-child { border-bottom:none; }
+    .field-label { font-size:12px; color:var(--text-faint); font-weight:500; letter-spacing:.02em; padding-top:1px; }
+    .field-value { font-size:14px; color:var(--text-dark); font-weight:400; word-break:break-word; }
+    .msg-box {
+      background:var(--green-surf);
+      border:.5px solid var(--green-border);
+      border-radius:4px;
+      padding:16px 18px;
+    }
+    .msg-box p {
+      font-size:14px;
+      color:var(--text-mid);
+      line-height:1.8;
+      font-weight:400;
+      white-space:pre-line;
+    }
+    .meta-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .meta-card {
+      background:var(--green-surf);
+      border:.5px solid var(--green-border);
+      border-radius:4px;
+      padding:12px 14px;
+    }
+    .meta-card-label {
+      font-size:10px;
+      color:var(--text-faint);
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:5px;
+    }
+    .meta-card-value {
+      font-size:13px;
+      color:var(--text-dark);
+      font-weight:500;
+      line-height:1.4;
+      word-break:break-word;
+    }
+    .ftr {
+      background:var(--green-dark);
+      padding:14px 28px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .ftr-text { font-size:11px; color:#7ab86a; letter-spacing:.04em; }
+    .ftr-ref { font-size:11px; color:var(--green-light); font-weight:500; letter-spacing:.06em; white-space:nowrap; }
+
+    @media (max-width:700px) {
+      body { padding:14px 8px; }
+      .hdr, .eyebrow, .section, .ftr { padding-left:16px; padding-right:16px; }
+      .meta-grid { grid-template-columns:1fr; }
+      .header-main, .header-side {
+        display:block !important;
+        width:100% !important;
+        text-align:left !important;
+      }
+      .header-side { padding-top:10px !important; }
+    }
+    @media (max-width:520px) {
+      .eyebrow-title { font-size:20px; }
+      .eyebrow { flex-direction:column; align-items:flex-start; }
+      .field-row { grid-template-columns:1fr; gap:4px; padding:10px 0; }
+      .field-label { padding-top:0; }
+      .ftr { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="header-main" valign="middle" width="72%" style="padding:0;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td valign="middle" style="padding:0 10px 0 0;">
+                <img src="public/images/logo/65480775-6edc-4e3e-b8c4-f989fe69c17c.png" alt="Ultrafood Distributors Inc. logo" class="brand-logo" />
+              </td>
+              <td valign="middle" style="padding:0;">
+                <div class="brand-text">Ultrafood Distributors Inc.<small>ULTRAFOOD</small></div>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class="header-side" align="right" valign="middle" width="28%" style="padding:0;">
+          <span class="hdr-badge">New Message Inquiry</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="eyebrow">
+    <div>
+      <div class="eyebrow-title">Message Inquiry</div>
+      <div class="eyebrow-sub">Received · April 7, 2026 10:15 AM · Ref #INQ-1024</div>
+    </div>
+    <div class="status-pill">Unread</div>
+  </div>
+
+  <div class="section">
+    <div class="sec-label">Sender Information</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 18px;">
+      <tr>
+        <td width="62" valign="top" style="padding:0;"><div class="avatar">JD</div></td>
+        <td valign="top" style="padding:4px 0 0;">
+          <div class="avatar-name">Juan Dela Cruz</div>
+          <div class="avatar-email">juan@example.com</div>
+        </td>
+      </tr>
+    </table>
+    <div class="field-row"><span class="field-label">Full Name</span><span class="field-value">Juan Dela Cruz</span></div>
+    <div class="field-row"><span class="field-label">Email Address</span><span class="field-value">juan@example.com</span></div>
+    <div class="field-row"><span class="field-label">Date Sent</span><span class="field-value">April 7, 2026 10:15 AM</span></div>
+  </div>
+
+  <div class="section">
+    <div class="sec-label">Inquiry Message</div>
+    <div class="msg-box">
+      <p>Hello Ultrafood team,
+I would like to ask for your updated product catalog and wholesale pricing for Luzon distribution. Thank you.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-label">Company Details</div>
+    <div class="meta-grid">
+      <div class="meta-card"><div class="meta-card-label">Company Name</div><div class="meta-card-value">Sample Trading Corp.</div></div>
+      <div class="meta-card"><div class="meta-card-label">Industry</div><div class="meta-card-value">Retail Distribution</div></div>
+      <div class="meta-card"><div class="meta-card-label">Submission ID</div><div class="meta-card-value">#1024</div></div>
+      <div class="meta-card"><div class="meta-card-label">Page</div><div class="meta-card-value">Ultrafood (ultrafood)</div></div>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <span class="ftr-text">Ultrafood Distributors Inc. · Automated Inquiry Notification</span>
+    <span class="ftr-ref">#INQ-1024</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+@media (max-width: 359px) {
+  body { font-size: 14px; }
+
+  #hero {
+    height: 55svh;
+    min-height: 280px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+
+  .slide-img {
+    top: 68px;
+    height: calc(100% - 68px);
+  }
+
+  #about .about-inner { padding: 0 14px; }
+  .mv-section-inner   { padding: 0 12px; }
+
+  .hist-entry { padding: 20px 14px; }
+  .hist-watermark { font-size: 2.5rem; right: 10px; }
+  .hist-dot .yr { font-size: .46rem; }
+  .hist-dot::before { width: 10px; height: 10px; }
+
+}
+
+/* ── Standard Mobile (360–479px) ── */
+@media (max-width: 479px) {
+  /* Tighter section spacing globally */
+  section { scroll-margin-top: 68px; }
+
+  #hero-wrapper { margin-bottom: 28px; }
+  #about { padding-top: 0.75rem !important; }
+
+  /* Hero dot carousel smaller */
+  .carousel-dot { width: 6px; height: 6px; }
+  .carousel-dot.active { width: 18px; }
+
+  /* Mission/Vision stacked */
+  .mv-row, .mv-row.reverse {
+    border-radius: 10px;
+    margin: 12px 0;
+  }
+}
+
+/* ── Large Mobile / Small Tablet (480–767px) ── */
+@media (min-width: 480px) and (max-width: 767px) {
+  section { scroll-margin-top: 68px; }
+  #hero-wrapper { margin-bottom: 32px; }
+  #about { padding-top: 1rem !important; }
+}
+
+/* ── Tablet (768–1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  section { scroll-margin-top: 80px; }
+}
+
+/* ── Desktop and above ── */
+@media (min-width: 1024px) {
+  section { scroll-margin-top: 96px; }
+}
+
+/* ── Prevent horizontal overflow globally ── */
+@media (max-width: 767px) {
+  #about p,
+  #mission p,
+  #history p,
+  #clients p,
+  #clients .uf-legend-subs span,
+  #contact p,
+  #contact label,
+  footer p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  #strengths p,
+  #brands p {
+    text-align: left;
+    text-justify: auto;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ── Utility: full-width images never overflow ── */
+img {
+  max-width: 100%;
+}
+
+/* ── Iframe maps always full width ── */
+#contact iframe {
+  width: 100% !important;
+}

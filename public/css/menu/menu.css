@@ -1,0 +1,18 @@
+@import url("./menu-layout.css");
+@import url("./menu-category.css");
+@import url("./menu-gallery.css");
+@import url("./menu-connect.css");
+@import url("./menu-products.css");
+@import url("./menu-recipe-detail.css");
+@import url("./menu-footer.css");
+@import url("./menu-responsive.css");
+.menu-bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}

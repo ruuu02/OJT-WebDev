@@ -1,0 +1,627 @@
+﻿/* Category card swiper container. */
+
+    .menu-bg-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+.menu-bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.category-swiper {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 0 20px;
+  margin-bottom: 0;
+  border-radius: 24px;
+  background: transparent;
+  box-shadow: none;
+}
+/* Horizontal row that holds all category cards. */
+#categorySwiperTrack.category-circle-wrap {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(150px, 182px));
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+  column-gap: 20px;
+  row-gap: 24px;
+  width: 100%;
+  will-change: auto;
+  transition: none;
+  transform: none !important;
+}
+
+
+/* Individual clickable circular card. */
+.category-circle-card {
+  width: 100%;
+  max-width: 182px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 16px;
+  padding: 12px 0;
+  background: transparent;
+  position: relative;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s ease, filter 0.32s ease;
+}
+
+@media (max-width: 1320px) {
+  #categorySwiperTrack.category-circle-wrap {
+    grid-template-columns: repeat(3, minmax(170px, 206px));
+  }
+}
+
+@media (max-width: 900px) {
+  #categorySwiperTrack.category-circle-wrap {
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    column-gap: 16px;
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  #categorySwiperTrack.category-circle-wrap {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 18px;
+    padding: 0;
+  }
+
+  .category-circle-card {
+    width: 100%;
+    max-width: 120px;
+    padding: 6px 0;
+  }
+
+  .category-circle-image {
+    width: min(100%, 96px);
+  }
+
+  #categorySwiperTrack .category-circle-name {
+    margin-top: 6px;
+    min-height: 2.55em;
+    font-size: 11px !important;
+    font-weight: 700;
+    line-height: 1.2 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #categorySwiperTrack.category-circle-wrap {
+    column-gap: 8px;
+    row-gap: 16px;
+  }
+
+  .category-circle-card {
+    max-width: 108px;
+  }
+
+  .category-circle-image {
+    width: min(100%, 84px);
+  }
+
+  #categorySwiperTrack .category-circle-name {
+    font-size: 10px !important;
+  }
+}
+
+.category-circle-card::before {
+  content: none;
+}
+
+.category-circle-card:hover,
+.category-circle-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: none;
+  z-index: 6;
+}
+
+.category-circle-card:hover::before,
+.category-circle-card:focus-visible::before {
+  animation: none;
+}
+
+.category-circle-card:hover .category-circle-image,
+.category-circle-card:focus-visible .category-circle-image {
+  border-color: #f37321;
+  transform: rotate(0deg) scale(1.15);
+  box-shadow: 0 24px 40px rgba(15, 23, 42, 0.28);
+  animation: category-image-rotate-360-pop-hover 12s linear infinite;
+}
+
+.category-circle-card.is-category-active {
+  box-shadow: none;
+  z-index: 7;
+}
+
+.category-circle-card.is-category-active .category-circle-image {
+  transform: rotate(0deg) scale(1.18);
+  border-color: #f37321;
+  box-shadow: 0 26px 44px rgba(15, 23, 42, 0.32);
+  animation: category-image-rotate-360-pop-active 12s linear infinite;
+}
+
+@keyframes category-image-rotate-360-pop-hover {
+  from {
+    transform: rotate(0deg) scale(1.15);
+  }
+  to {
+    transform: rotate(360deg) scale(1.15);
+  }
+}
+
+@keyframes category-image-rotate-360-pop-active {
+  from {
+    transform: rotate(0deg) scale(1.18);
+  }
+  to {
+    transform: rotate(360deg) scale(1.18);
+  }
+}
+
+
+/* Circular image frame for each category. */
+.category-circle-image {
+  width: min(100%, 172px);
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0;
+  box-shadow: none;
+  background: #e2e8f0;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s ease, border-color 0.32s ease, filter 0.32s ease;
+}
+
+.category-circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.category-circle-card:hover .category-circle-image img,
+.category-circle-card:focus-visible .category-circle-image img {
+  transform: scale(1.03);
+  filter: saturate(1.03);
+}
+
+.category-circle-card.is-category-active .category-circle-image img {
+  transform: none;
+}
+
+
+/* Category title text below each image. */
+#categorySwiperTrack .category-circle-name {
+  position: relative;
+  margin: 16px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: clamp(18px, 1.55vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.28 !important;
+  text-align: center;
+  color: #18212f !important;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: clip;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  min-height: 2.56em;
+  max-width: 100%;
+  box-shadow: none;
+  transition: color 0.24s ease, transform 0.24s ease;
+}
+
+#categorySwiperTrack .category-circle-name::after {
+  content: none;
+}
+
+
+/* Popup overlay elements for category detail modal. */
+.category-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.category-popup.is-open {
+  display: flex;
+}
+
+.category-popup-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.58);
+}
+
+.category-popup-panel {
+  position: relative;
+  z-index: 1;
+  width: min(500px, 92vw);
+  border: 1px solid var(--menu-panel-border, #f1c0c0);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, var(--menu-panel-bg-top, #fffefe), var(--menu-panel-bg-bottom, #fff6f6));
+  box-shadow: 0 30px 60px rgba(2, 6, 23, 0.28);
+  padding: 22px 22px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.category-popup-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 8px;
+  background: linear-gradient(90deg, #820c0c 0%, #c70000 58%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+.category-popup-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 0;
+  background: #fff1f1;
+  color: #820c0c;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.category-popup-image-wrap {
+  width: min(100%, 270px);
+  margin: 12px auto 16px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.96);
+  box-shadow:
+    0 20px 34px rgba(130, 12, 12, 0.12),
+    0 0 0 1px rgba(241, 192, 192, 0.9);
+}
+
+.category-popup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.category-popup-title {
+  margin: 0 0 14px;
+  font-family: var(--font-body);
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1;
+  color: var(--menu-panel-heading, #101828);
+}
+
+.category-popup-link {
+  display: inline-block;
+  border-radius: 999px;
+  background: #980707;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 12px 18px;
+}
+
+
+/* Accessible hidden checkbox tied to the custom pancake toggle. */
+.pancakepan-toggle-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* Pancake toggle wrapper and caption. */
+.pancakepan-toggle-wrap {
+  display: grid;
+  place-items: center;
+  margin: 8px 0 18px;
+}
+
+.pancakepan-toggle-caption {
+  margin: 6px 0 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #334155;
+}
+
+
+/* Main visual track for the pan-flip switch. */
+.pancakepan-toggle-track {
+  --w: min(104px, 46vw);
+  --h: 30px;
+  width: var(--w);
+  height: var(--h);
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  user-select: none;
+  background: radial-gradient(circle at center, #b3d5c6, #a3cbba);
+  border: 1px solid rgba(31, 41, 55, 0.55);
+  box-shadow:
+    0 1px 0 rgba(31, 41, 55, 0.12),
+    0 3px 5px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.pancakepan-toggle-track::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+
+/* Internal pan, pancake, and smoke scene. */
+.pan-toggle-scene {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 350px;
+  height: 150px;
+  transform: translate(-50%, -50%) scale(0.18);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.pan-toggle-griddle::before {
+  content: "";
+  position: absolute;
+  width: 52.5%;
+  height: 25px;
+  top: calc(50% - 12.5px);
+  right: -50%;
+  background: #333;
+  border-radius: 35% 200% 100% 350% / 200% 200%;
+  z-index: -1;
+}
+
+.pan-toggle-griddle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #000;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-shadow:
+    inset 0 0 5px #333,
+    inset 0 0 3px 8px #4d4d4d,
+    inset 0 0 20px 20px #333;
+  transform-origin: 175px 50%;
+}
+
+.pan-toggle-pancake {
+  position: absolute;
+  left: -60px;
+  top: 55px;
+  width: 92px;
+  height: 34px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffd59a, #e9ad62 55%, #d38b43);
+  box-shadow:
+    inset 0 -10px 0 rgba(0, 0, 0, 0.12),
+    0 10px 14px rgba(0, 0, 0, 0.18);
+  z-index: 3;
+  opacity: 0;
+  transform-origin: 50% 120%;
+}
+
+.pan-toggle-pancake::before {
+  content: "";
+  position: absolute;
+  inset: 7px 10px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 25% 60%, rgba(123, 63, 0, 0.22), transparent 35%),
+    radial-gradient(circle at 55% 40%, rgba(123, 63, 0, 0.2), transparent 35%),
+    radial-gradient(circle at 75% 65%, rgba(123, 63, 0, 0.16), transparent 35%);
+  opacity: 0.8;
+}
+
+.pan-toggle-smoke {
+  position: absolute;
+  left: 28px;
+  top: -80px;
+  width: 120px;
+  height: 140px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.pan-toggle-smoke span {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow:
+    inset -6px -8px 0 rgba(0, 0, 0, 0.08),
+    0 4px 0 rgba(0, 0, 0, 0.05);
+  opacity: 0;
+}
+
+.pancakepan-toggle-track.is-flipping .pan-toggle-griddle {
+  animation: pan-toggle-panFlip 1.25s ease-in-out 1;
+}
+
+.pancakepan-toggle-track.is-flipping .pan-toggle-pancake {
+  animation: pan-toggle-pancakeFlip 1.25s ease-in-out 1;
+}
+
+.pancakepan-toggle-track.is-flipping .pan-toggle-smoke span {
+  animation: pan-toggle-smoke 1.25s ease-in-out 1;
+}
+
+.pancakepan-toggle-track.is-flipping .pan-toggle-smoke span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.pancakepan-toggle-track.is-flipping .pan-toggle-smoke span:nth-child(2) {
+  animation-delay: 0.22s;
+}
+
+.pancakepan-toggle-track.is-flipping .pan-toggle-smoke span:nth-child(3) {
+  animation-delay: 0.44s;
+}
+
+.pan-toggle-smoke span:nth-child(1) {
+  left: 10px;
+  animation-delay: 0s;
+}
+
+.pan-toggle-smoke span:nth-child(2) {
+  left: 40px;
+  animation-delay: 0.6s;
+}
+
+.pan-toggle-smoke span:nth-child(3) {
+  left: 70px;
+  animation-delay: 1.2s;
+}
+
+
+/* Keyframes for pan/pancake/smoke flip animation. */
+@keyframes pan-toggle-panFlip {
+  0% { transform: rotateZ(0deg) rotateX(0deg); }
+  20% { transform: rotateZ(-10deg) rotateX(0deg); }
+  40% { transform: rotateZ(18deg) rotateX(35deg); }
+  55% { transform: rotateZ(10deg) rotateX(65deg); }
+  70% { transform: rotateZ(-6deg) rotateX(10deg); }
+  100% { transform: rotateZ(0deg) rotateX(0deg); }
+}
+
+@keyframes pan-toggle-pancakeFlip {
+  0% {
+    opacity: 0;
+    transform: translateX(140px) translateY(22px) rotateY(180deg) rotateZ(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(100px) translateY(5px) rotateY(180deg) rotateZ(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(55px) translateY(-95px) rotateY(0deg) rotateZ(180deg);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(85px) translateY(-20px) rotateY(0deg) rotateZ(300deg);
+  }
+  90% {
+    transform: translateX(92px) translateY(12px) rotateY(0deg) rotateZ(360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(140px) translateY(22px) rotateY(180deg) rotateZ(360deg);
+  }
+}
+
+@keyframes pan-toggle-smoke {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(-60px) scale(1.2);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-120px) scale(1.6);
+    opacity: 0;
+  }
+}
+
+
+/* Active visual state when toggle is checked. */
+#pancakePanToggle:checked + .pancakepan-toggle-track {
+  box-shadow:
+    0 1px 0 rgba(31, 41, 55, 0.12),
+    0 3px 7px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(15, 118, 110, 0.35);
+}
+
+.pancakepan-toggle-track:active {
+  transform: translateY(1px);
+}
+
+
+/* Legacy menu slider card section (kept for compatibility). */
+.menu-slider {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding: 34px 28px 88px;
+  margin-left: -5px;
+  margin-right: -51px;
+  border: 3px solid transparent;
+  border-radius: 14px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    var(--menu-line-image-alt) border-box;
+  background-size: auto, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}

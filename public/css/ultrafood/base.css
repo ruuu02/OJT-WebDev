@@ -1,0 +1,42 @@
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; }
+body  { font-family: 'Spline Sans', sans-serif; overflow-x: hidden; background: #ffffff; }
+/* Default: natural aspect — avoid global cover (looks zoomed/cropped).
+   Use .object-cover / h-full w-full where a crop is intentional (e.g. about). */
+img   { display: block; max-width: 100%; height: auto; }
+a     { text-decoration: none; }
+
+/* ── Google Fonts Import ── */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;500;600;700;800;900&family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ── Color Palette Variables ── */
+:root {
+  --green-vivid:   #79CE1B;
+  --yellow-lime:   #E5FA38;
+  --green-bright:  #95F125;
+  --green-dark:    #4B7A08;
+  --white:         #FFFFFF;
+
+  /* Derived tones */
+  --green-vivid-10: rgba(121,206,27,0.10);
+  --green-vivid-15: rgba(121,206,27,0.15);
+  --green-vivid-20: rgba(121,206,27,0.20);
+  --green-vivid-30: rgba(121,206,27,0.30);
+  --green-dark-bg:  #2a4a06;
+  --text-dark:      #1a2e04;
+  --text-mid:       #3d5c0a;
+
+  /* Font families */
+  --font-heading: 'Anek Latin', sans-serif;
+  --font-body:    'Spline Sans', sans-serif;
+}
+
+/* ── Global Heading Overrides ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+}
+
+p, span, a, label, input, textarea, button, li {
+  font-family: var(--font-body);
+}

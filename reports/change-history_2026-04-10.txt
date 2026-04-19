@@ -1,0 +1,53 @@
+﻿b96c93e6f4c53fcfbe729a2721550f902274540f
+2026-04-10T14:46:13+08:00
+ultrafood05
+talongers
+
+M	public/css/menu/menu-category-grid.css
+M	public/css/menu/menu-layout.css
+M	public/css/menu/menu-responsive.css
+M	public/css/nordic/nordic-products.css
+M	public/css/nordic/nordic-recipe-details.css
+M	public/css/nordic/nordic.css
+M	public/css/ultrafood/brands.css
+M	public/css/ultrafood/map.css
+M	public/css/ultrafood/strengths.css
+M	public/js/menu.js
+M	public/js/nordic.js
+
+2910c51b06f9b35f640a383f941979fef7dd28f4
+2026-04-10T10:50:13+08:00
+ultrafood5
+removeclever
+
+M	app/Http/Controllers/NordicRecipeController.php
+M	app/Models/NordicRecipe.php
+A	public/images/banner/4KTazmEW3Hy9OVeFliOCmbmQ49L1SsusdU3Us9QW.png
+D	public/images/banner/5pH08yXMTKJwGDnpijJk89BtjKlhXrHaEdZaiZkW.jpg
+A	public/images/banner/CIfShMbQvq9MSkBWkDBBgmaP9bRISVNhNM7lTMG2.png
+R100	public/images/banner/kJS3whui95QGCLORYBzZMrVIwvEpWaf4U0M4NPxg.png	public/images/banner/FbeoP7KKhuWgBwATK6xErV36CfEpSWOARQblVtfv.png
+A	public/images/banner/IQ1dOTqtosZm0CKjoNUaTiuYKVVer15fDpQfoVU0.png
+D	public/images/banner/JlBKc54sbQqKBbhxfoi1MEudxQG6UhrsRR8vo7uC.png
+D	public/images/banner/KDzpxLLQEKsv9FgH7g2S28YD779wYjoGgF4NM2UV.jpg
+D	public/images/banner/QCEg0wO1DZG2M3SSVl6tnAR1AzprAu6dHYgMcG1I.jpg
+D	public/images/banner/UMjegVPUJZVKA2XqsCBu7hrassbWS4EwA3MUrgzt.jpg
+D	public/images/banner/WkyviywhvcuSYiFZVEuNbw1Nm2Qz4d4s0BvIQbrU.jpg
+D	public/images/banner/Xtj0AlAYvOzyxZySx0VvFK2egshckLikvmJw07pE.png
+A	public/images/banner/acXNdFyKjMOdJSkwBDYzOsOwpNJhZmnqASXMkLyX.png
+A	public/images/banner/cSvlhiLlBLc9rUOrvsISLf6JcsJypJbJEAAjjhsg.png
+A	public/images/banner/hms9a7DJyQoqGULHjf1q0mHfIM5HwAusX6wLBqax.png
+A	public/images/banner/hsw0QC88rC2DCPkYNNQ0mEn1joLH9vaFrglAYJYe.png
+A	public/images/banner/kZsUDvn2ReYjEHkgPLyKW81dWfSvfkL1O3gWeoJd.png
+D	public/images/banner/mOjlIeG3yB0uZqDaO7rMtLAIrxgTaiA7R8W05lap.jpg
+R100	public/images/banner/kSwRISId4LkwdZHlSZfkuLlNsqMSW1uOPOjuZ3ht.png	public/images/banner/pczwtiIY124giVXCpEZj3JdDvq2JpCzRATogx2kO.png
+A	public/images/banner/sVGq0HnwWadpBEbPTcobMXuQvKOu61skugEgUjJ0.png
+R100	public/images/banner/rW5cljrBl4onEvoek3vpq2mWGAGdjbewE99mcvNq.png	public/images/banner/tU7OtLuEYcmVyRVi5GQBxvVMx4ovHyNIY5jjgBX3.png
+D	public/images/banner/u0FTJQSpbwnC65fDge0OQUwMgz5zAGNv1mz62euE.png
+A	public/images/banner/uTzYpf9pO4GjKVJpkVXJAr29XLJQY3HL2oHZmIw7.png
+D	public/images/banner/vvCihNTFjHM6xdnLFnl6OHz2wmlqWEYsPjIXQfo6.png
+R100	public/images/banner/pwwvZtvAlikCu21IqV1KidtKHWRVbW91WJmBujVD.png	public/images/banner/wAy6aTN4rwBZArVW1XWtQpF6309BtOfvx2lJC981.png
+A	public/images/banner/xup7RsaZYmJajp2s96kZUTiGpY9DWW77x9Vuti0m.png
+D	public/images/banner/yf5kZkOzmStHuPVdy0cjCkikmjXc9U4XjnDwtipX.jpg
+M	public/js/admin/visual-editor.js
+M	resources/views/admin/visual-editor.blade.php
+M	resources/views/frontend/nordic-recipe-details.blade.php

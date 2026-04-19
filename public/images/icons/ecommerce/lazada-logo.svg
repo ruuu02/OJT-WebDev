@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg4161" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600.2 487.3">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+
+      .st2 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-1391.8" y1="198.4" x2="-1325" y2="197.9" gradientTransform="translate(12392.7 -1520.3) scale(8.9)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffb900"/>
+      <stop offset=".4" stop-color="#f38700"/>
+      <stop offset=".6" stop-color="#f83c72"/>
+      <stop offset=".8" stop-color="#fc1cbe"/>
+      <stop offset=".9" stop-color="#fe08ed"/>
+      <stop offset="1" stop-color="#f0f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="-1373.5" y1="220.2" x2="-1305.5" y2="182.5" gradientTransform="translate(12392.7 -1520.3) scale(8.9)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ee0a3f"/>
+      <stop offset="1" stop-color="#ee0a3f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient2" x1="-1685.7" y1="210.5" x2="-1652.5" y2="183.8" gradientTransform="translate(-14601 -1511.3) rotate(-180) scale(8.8 -8.8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ed6600"/>
+      <stop offset="1" stop-color="#f98200"/>
+    </linearGradient>
+  </defs>
+  <path id="path69" class="st3" d="M300.2,487.3c-4.3,0-8.5-1.1-12.2-3.2-31.7-18.4-266.9-165.8-275.8-170.3C5.4,310.6.8,304.2,0,296.8V90c-.2-7.7,3.6-15,10.1-19.2l1.7-1C34.7,55.7,110.8,9.2,122.9,2.6c2.8-1.6,5.9-2.5,9.1-2.6,3,0,6,.8,8.6,2.2,0,0,106.6,69.5,122.9,75.7,11.4,5.3,23.9,7.9,36.5,7.7,14.3.3,28.4-3.1,40.9-10,15.9-8.4,117.8-73,118.8-73,2.6-1.6,5.5-2.4,8.5-2.3,3.2,0,6.4.9,9.1,2.6,13.9,7.7,108.3,65.4,112.3,68,6.6,4,10.7,11.2,10.6,19v206.8c-.7,7.4-5.4,13.9-12.2,17-8.9,4.9-243.3,152.3-275.6,170.3-3.7,2.2-7.9,3.4-12.2,3.4" inkscape:connector-curvature="0"/>
+  <path id="path77" class="st2" d="M299,487.3h1.2c4.3,0,8.5-1.1,12.2-3.2,31.7-18.4,266.8-165.8,275.6-170.3,6.8-3.1,11.4-9.6,12.2-17V90c0-3.5-.8-7-2.3-10.1l-298.9,164.1v243.3" inkscape:connector-curvature="0"/>
+  <path id="path968" class="st0" d="M298,484.4h-1.2c-4.2,0-8.4-1.1-12-3.1-31.4-18.2-263.9-164-272.7-168.5-6.8-3.1-11.4-9.5-12.1-16.9V91.3c0-3.5.7-6.9,2.3-10l295.7,162.3v240.7" inkscape:connector-curvature="0"/>
+  <path id="path33" class="st1" d="M121.5,135.6h31.2v150h53.8v29.6h-84.8v-179.7" inkscape:connector-curvature="0"/>
+  <path id="path39" class="st1" d="M278.6,180.6c16.5-.2,32.2,7.3,42.3,20.4v-17.7h29.1v132.2h-29.1v-17.7c-10.2,13-25.8,20.6-42.3,20.4-36.3,0-63.8-31-63.8-68.8s27.5-68.8,63.8-68.8M283.9,207.1c-23.6,0-39.1,18.5-39.1,42.3s15.9,42.3,39.1,42.3,39.1-18.5,39.1-42.3-15.6-42.3-39.1-42.3" inkscape:connector-curvature="0"/>
+  <path id="path45" class="st1" d="M372.7,292.5l69.3-82.8h-68.3v-26.4h105.9v23.3l-69.1,82.5h70.6v26.4h-108.5v-23" inkscape:connector-curvature="0"/>
+</svg>

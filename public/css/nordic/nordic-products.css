@@ -1,0 +1,543 @@
+.nordic-products-page h1,
+.nordic-products-page h2,
+.nordic-products-page h3,
+.nordic-products-page h4,
+.nordic-products-page h5,
+.nordic-products-page h6 {
+  font-family: "Farro", sans-serif;
+  font-weight: 700;
+}
+
+.nordic-products-screen::before {
+  background: none;
+  background-image: none;
+}
+
+.nordic-products-screen {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nordic-products-screen .nordic-products-page {
+  flex: 1 0 auto;
+}
+
+.nordic-products-screen .nordic-footer {
+  margin-top: auto;
+}
+
+.nordic-products-page {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  padding: 24px 0 60px;
+}
+
+.nordic-products-page p,
+.nordic-products-page a,
+.nordic-products-page button {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+}
+
+.nordic-products-page button {
+  font-weight: 500;
+}
+
+.nordic-products-hero {
+  width: min(1240px, 100% - 32px);
+  margin: 0 auto 24px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(14, 39, 26, 0.96), rgba(30, 82, 54, 0.9)),
+    var(--nordic-products-hero-bg, url("https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=1600&q=80&auto=format&fit=crop"));
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  box-shadow: 0 24px 40px rgba(16, 34, 23, 0.24);
+  position: relative;
+  overflow: hidden;
+}
+
+.nordic-products-hero__texture {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(230, 186, 64, 0.24), transparent 32%),
+    radial-gradient(circle at left center, rgba(255, 255, 255, 0.1), transparent 30%),
+    repeating-linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 2px,
+      transparent 2px,
+      transparent 16px
+    );
+  pointer-events: none;
+}
+
+.nordic-products-hero__inner {
+  position: relative;
+  z-index: 1;
+  padding: 34px clamp(20px, 4vw, 46px);
+}
+
+.nordic-products-kicker {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.nordic-products-hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.nordic-products-hero p {
+  margin: 0;
+  max-width: 58ch;
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.55;
+}
+
+.nordic-products-list {
+  width: 100%;
+  margin: 0;
+  padding: 8px 0 0;
+  display: grid;
+  gap: 10px;
+  justify-items: stretch;
+  text-align: left;
+}
+
+.nordic-products-list-text {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  color: rgba(34, 57, 71, 0.82);
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.4;
+}
+
+.nordic-products-list-text a {
+  color: var(--brand-deep, #223947);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nordic-products-list-text a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.nordic-products-list-text .is-current {
+  color: var(--brand-heading, #4d2000);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nordic-products-list-text .next-link {
+  color: var(--brand-deep, #223947);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nordic-products-list-title {
+  margin: 0;
+  font-size: clamp(24px, 3.4vw, 34px);
+  font-family: "Farro", sans-serif;
+  font-weight: 700;
+  color: #1e1e1e;
+  line-height: 1.2;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: opacity 220ms ease, transform 220ms ease;
+  will-change: opacity, transform;
+  text-align: center;
+  transform: translateX(var(--title-center-nudge, 0px));
+}
+
+.nordic-products-list-title.is-updating {
+  opacity: 0.65;
+  transform: translateX(var(--title-center-nudge, 0px)) translateY(2px);
+}
+
+.nordic-products-carousel {
+  width: 100%;
+  margin: 18px 0 0;
+  padding: 20px 0 10px;
+}
+
+.nordic-products-display {
+  --title-center-nudge: 18px;
+  width: min(1240px, 100% - 32px);
+  margin: 0 auto;
+}
+
+/* Standby only: set .product-gallery-left.is-standby to display:grid when the left gallery is needed. */
+.product-gallery-left.is-standby {
+  display: none;
+}
+
+.product-3d-stage {
+  --side-offset: 360px;
+  --stage-center-nudge: -25px;
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 12px auto 0;
+  height: 640px;
+  perspective: 1700px;
+  transform-style: preserve-3d;
+  transform: translateX(var(--stage-center-nudge));
+}
+
+.product-3d-card {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 470px;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  transition: transform 420ms ease, opacity 420ms ease, filter 420ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+.product-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  transform-style: preserve-3d;
+  transition: transform 520ms ease;
+  cursor: pointer;
+}
+
+.product-flip-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.product-flip-face.is-back {
+  transform: rotateY(180deg);
+}
+
+.product-3d-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transform: translateZ(28px);
+  transition: transform 420ms ease, filter 420ms ease;
+  pointer-events: none;
+  touch-action: manipulation;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-3d-card.is-center:hover .product-flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.product-3d-card.is-center.is-flipped .product-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.product-flip-toggle {
+  display: none;
+  position: static;
+  transform: none;
+  border: 1px solid #223947;
+  background: #223947 !important;
+  color: #ffffff !important;
+  font-family: "Farro", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 8px 12px;
+  line-height: 1;
+  box-shadow: 0 10px 20px rgba(20, 30, 38, 0.18);
+  cursor: pointer;
+  margin-top: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease, background-color 220ms ease, color 220ms ease;
+}
+
+.product-3d-card.is-center .product-flip-toggle {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product-flip-toggle:hover {
+  background: #223947 !important;
+  color: #ffffff !important;
+}
+
+.product-flip-toggle:focus-visible {
+  outline: 2px solid #e6ba40;
+  outline-offset: 2px;
+  background: #223947 !important;
+  color: #ffffff !important;
+}
+
+.product-flip-toggle:focus,
+.product-flip-toggle:active {
+  background: #223947 !important;
+  color: #ffffff !important;
+}
+
+.product-3d-card.is-center {
+  z-index: 3;
+  opacity: 1;
+  filter: none;
+  transform: translateX(-50%) translateY(2px) translateZ(90px) rotateY(0deg) scale(1.04);
+}
+
+.product-3d-card.is-left {
+  z-index: 2;
+  opacity: 0.92;
+  filter: saturate(0.88);
+  transform: translateX(calc(-50% - var(--side-offset))) translateY(36px) translateZ(-50px) rotateY(-24deg) scale(0.82);
+}
+
+.product-3d-card.is-right {
+  z-index: 2;
+  opacity: 0.92;
+  filter: saturate(0.88);
+  transform: translateX(calc(-50% + var(--side-offset))) translateY(36px) translateZ(-50px) rotateY(24deg) scale(0.82);
+}
+
+.product-3d-card.is-center img {
+  transform: translateZ(42px) scale(1.02);
+}
+
+.product-3d-card.is-left img,
+.product-3d-card.is-right img {
+  transform: translateZ(18px);
+  filter: brightness(0.9);
+}
+
+
+@media (max-width: 900px) {
+  .product-3d-stage {
+    --stage-center-nudge: -57px;
+  }
+
+  .nordic-products-display {
+    --title-center-nudge: 0px;
+    width: min(1240px, 100% - 20px);
+  }
+
+  .product-3d-stage {
+    --side-offset: 175px;
+  }
+
+  .nordic-products-list {
+    padding-top: 4px;
+    gap: 8px;
+    justify-items: stretch;
+    text-align: left;
+  }
+
+  .nordic-products-list-text {
+    font-size: 13px;
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .nordic-products-list-title {
+    width: 100%;
+    margin-inline: auto;
+    font-size: 22px;
+  }
+
+  .nordic-products-carousel {
+    margin-top: 10px;
+  }
+
+  .product-3d-stage {
+    height: 390px;
+  }
+
+  .product-3d-card {
+    width: 260px;
+  }
+
+  .product-flip-inner {
+    height: 210px;
+  }
+
+  .product-3d-card img {
+    height: 100%;
+  }
+
+  .product-flip-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    padding: 7px 10px;
+  }
+
+  .product-3d-card.is-left {
+    transform: translateX(calc(-50% - var(--side-offset))) translateY(24px) translateZ(-34px) rotateY(-20deg) scale(0.78);
+  }
+
+  .product-3d-card.is-right {
+    transform: translateX(calc(-50% + var(--side-offset))) translateY(24px) translateZ(-34px) rotateY(20deg) scale(0.78);
+  }
+
+  .product-3d-card.is-center {
+    transform: translateX(-50%) translateY(6px) translateZ(60px) rotateY(0deg) scale(1.04);
+  }
+
+}
+
+@media (max-width: 640px) {
+  .nordic-products-page {
+    padding: 12px 0 34px;
+    overflow-x: hidden;
+  }
+
+  .nordic-products-screen .nordic-products-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nordic-products-hero {
+    width: min(1240px, 100% - 16px);
+    margin-bottom: 14px;
+    border-radius: 18px;
+  }
+
+  .nordic-products-hero__inner {
+    padding: 22px 16px;
+  }
+
+  .nordic-products-display {
+    --title-center-nudge: 0px;
+    width: min(1240px, 100% - 16px);
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: translateY(-6px);
+  }
+
+  .nordic-products-list,
+  .nordic-products-carousel {
+    width: 100%;
+  }
+
+  .nordic-products-list {
+    padding-top: 0;
+    justify-items: stretch;
+    text-align: left;
+    gap: 0;
+  }
+
+  .nordic-products-list-text {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 30px;
+    position: relative;
+    top: -90px;
+  }
+
+  .nordic-products-list-title {
+    width: 100%;
+    margin-inline: auto;
+    font-size: 20px;
+  }
+
+  .nordic-products-carousel {
+    margin-top: 2px;
+    padding-top: 6px;
+  }
+
+  .product-3d-stage {
+    --side-offset: 146px;
+    --stage-center-nudge: -45px;
+    margin-top: 0;
+    height: 400px;
+    perspective: 1200px;
+  }
+
+  .product-3d-card {
+    width: 270px;
+  }
+
+  .product-flip-inner {
+    height: 270px;
+  }
+
+  .product-3d-card.is-center {
+    transform: translateX(-50%) translateY(10px) translateZ(40px) rotateY(0deg) scale(1.02);
+  }
+
+  .product-3d-card.is-left {
+    transform: translateX(calc(-50% - var(--side-offset))) translateY(30px) translateZ(-20px) rotateY(-14deg) scale(0.88);
+  }
+
+  .product-3d-card.is-right {
+    transform: translateX(calc(-50% + var(--side-offset))) translateY(30px) translateZ(-20px) rotateY(14deg) scale(0.88);
+  }
+
+  .product-flip-toggle {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nordic-products-display {
+    --title-center-nudge: 0px;
+  }
+
+  .product-3d-stage {
+    --side-offset: 118px;
+    --stage-center-nudge: -37px;
+    height: 360px;
+  }
+
+  .product-3d-card {
+    width: 238px;
+  }
+
+  .product-flip-inner {
+    height: 238px;
+  }
+
+  .product-3d-card.is-left {
+    transform: translateX(calc(-50% - var(--side-offset))) translateY(28px) translateZ(-14px) rotateY(-12deg) scale(0.82);
+  }
+
+  .product-3d-card.is-right {
+    transform: translateX(calc(-50% + var(--side-offset))) translateY(28px) translateZ(-14px) rotateY(12deg) scale(0.82);
+  }
+}

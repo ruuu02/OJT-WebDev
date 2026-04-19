@@ -1,0 +1,274 @@
+.shared-connect {
+  --sc-bg: #f7fafc;
+  --sc-card: #ffffff;
+  --sc-text: #0f172a;
+  --sc-muted: #475569;
+  --sc-line: #cbd5e1;
+  --sc-accent: #820c0c;
+  --sc-accent-hover: #5f0a0a;
+  background: linear-gradient(180deg, #f8fafc 0%, var(--sc-bg) 100%);
+  padding: 28px 16px;
+  font-family: var(--sc-font-body, "Asap", sans-serif);
+}
+
+body.menu-page .shared-connect {
+  --sc-bg: color-mix(in srgb, var(--primary, #820c0c) 8%, #7f1d1d 92%);
+  --sc-card: color-mix(in srgb, var(--primary, #820c0c) 5%, #7f1d1d 95%);
+  --sc-text: #ffffff;
+  --sc-muted: rgba(255, 255, 255, 0.88);
+  --sc-line: #e6ba40;
+  --sc-accent: #ffffff;
+  --sc-accent-hover: #ffffff;
+  --sc-font-body: var(--font-body, "Asap", sans-serif);
+  --sc-font-heading: var(--font-glory, "Glory", sans-serif);
+  background: #7f1d1d;
+}
+
+body.menu-page .shared-connect .shared-connect-input {
+  color: #223947;
+}
+
+body.menu-page .shared-connect .shared-connect-input::placeholder {
+  color: #6b7280;
+}
+
+body.menu-page .shared-connect .shared-connect-label {
+  color: #000000;
+}
+
+body.menu-page .shared-connect .shared-connect-submit {
+  font-family: var(--font-glory, "Glory", sans-serif);
+  color: #000000;
+  border: 1px solid #e6ba40;
+}
+
+body.menu-page .shared-connect .shared-connect-submit:hover {
+  color: #000000;
+}
+
+body.menu-page .shared-connect .shared-connect-inner {
+  max-width: 700px;
+}
+
+body.menu-page .shared-connect .shared-connect-form {
+  background: #ffffff;
+  border-color: #e6ba40;
+  padding: 10px;
+}
+
+body.menu-page .shared-connect .shared-connect-input {
+  border-color: #e6ba40;
+}
+
+body.menu-page .shared-connect .shared-connect-grid {
+  gap: 10px;
+}
+
+body.menu-page .shared-connect .shared-connect-head {
+  margin-bottom: 10px;
+}
+
+body.menu-page .shared-connect .shared-connect-title {
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+}
+
+body.menu-page .shared-connect .shared-connect-subtext {
+  font-size: 0.86rem;
+}
+
+body.nordic-page .shared-connect {
+  --shared-connect-bg: #223947;
+  --sc-bg: var(--shared-connect-bg, #223947);
+  --sc-card: #ebebeb;
+  --sc-text: var(--brand-deep, #223947);
+  --sc-muted: var(--muted, #606060);
+  --sc-line: color-mix(in srgb, var(--line, #c8c8c8) 86%, white 14%);
+  --sc-accent: #ffffff;
+  --sc-accent-hover: #ffffff;
+  --sc-font-body: "Fira Sans", sans-serif;
+  --sc-font-heading: "Farro", sans-serif;
+  background: linear-gradient(
+    180deg,
+    var(--shared-connect-bg, var(--brand-deep, #223947)) 0%,
+    color-mix(in srgb, var(--shared-connect-bg, var(--brand-deep, #223947)) 82%, black 18%) 100%
+  );
+  border-top: 1px solid rgba(230, 186, 64, 0.35);
+  border-bottom: 1px solid rgba(230, 186, 64, 0.28);
+}
+
+body.nordic-page .shared-connect .shared-connect-title {
+  color: var(--brand-accent, #e6ba40);
+}
+
+body.nordic-page .shared-connect .shared-connect-subtext {
+  color: rgba(235, 235, 235, 0.9);
+}
+
+body.nordic-page .shared-connect .shared-connect-form {
+  background: linear-gradient(180deg, #efefef 0%, #e7e7e7 100%);
+  border-color: rgba(34, 57, 71, 0.2);
+}
+
+body.nordic-page .shared-connect .shared-connect-input {
+  background: #f2f2f2;
+}
+
+body.nordic-page .shared-connect .shared-connect-input:focus {
+  border-color: var(--brand-accent, #e6ba40);
+  box-shadow: 0 0 0 3px rgba(230, 186, 64, 0.2);
+}
+
+body.nordic-page .shared-connect .shared-connect-submit {
+  color: var(--brand-deep, #223947) !important;
+  font-family: var(--sc-font-heading, "Farro", sans-serif);
+  font-weight: 700;
+  border: 1px solid rgba(34, 57, 71, 0.24);
+}
+
+body.nordic-page .shared-connect .shared-connect-submit:hover {
+  color: var(--brand-deep, #223947) !important;
+}
+
+.shared-connect-inner {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.shared-connect-head {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.shared-connect-title {
+  margin: 0 0 6px;
+  color: var(--sc-text);
+  font-family: var(--sc-font-heading, var(--sc-font-body, "Asap", sans-serif));
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  line-height: 1.1;
+}
+
+.shared-connect-subtext {
+  margin: 0 auto;
+  color: var(--sc-muted);
+  max-width: 680px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.shared-connect-form {
+  background: var(--sc-card);
+  border: 1px solid var(--sc-line);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.shared-connect-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.shared-connect-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shared-connect-field--full {
+  grid-column: 1 / -1;
+}
+
+.shared-connect-label {
+  font-family: var(--sc-font-body, "Asap", sans-serif);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--sc-text);
+}
+
+.shared-connect-input {
+  font-family: var(--sc-font-body, "Asap", sans-serif);
+  width: 100%;
+  border: 1px solid var(--sc-line);
+  border-radius: 8px;
+  padding: 9px 12px;
+  color: var(--sc-text);
+  background: #fff;
+  font-size: 0.9rem;
+}
+
+.shared-connect-input:focus {
+  outline: none;
+  border-color: var(--sc-accent);
+  box-shadow: 0 0 0 3px rgba(130, 12, 12, 0.12);
+}
+
+.shared-connect-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.shared-connect-submit {
+  font-family: var(--sc-font-body, "Asap", sans-serif);
+  border: 0;
+  border-radius: 999px;
+  background: var(--sc-accent);
+  color: #fff;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.shared-connect-submit:hover {
+  background: var(--sc-accent-hover);
+}
+
+.shared-connect-success {
+  font-family: var(--sc-font-body, "Asap", sans-serif);
+  display: none;
+  margin-top: 10px;
+  border: 1px solid rgba(20, 83, 45, 0.2);
+  background: rgba(20, 83, 45, 0.08);
+  color: #14532d;
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.shared-connect-success.is-visible {
+  display: block;
+}
+
+.shared-connect-error {
+  font-family: var(--sc-font-body, "Asap", sans-serif);
+  display: none;
+  margin-top: 10px;
+  border: 1px solid rgba(153, 27, 27, 0.25);
+  background: rgba(153, 27, 27, 0.08);
+  color: #7f1d1d;
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.shared-connect-error.is-visible {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .shared-connect {
+    padding: 22px 14px;
+  }
+
+  .shared-connect-grid {
+    grid-template-columns: 1fr;
+  }
+}

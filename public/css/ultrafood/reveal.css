@@ -1,0 +1,14 @@
+/* ── Scroll Reveal ── */
+.reveal-up    { opacity: 0; transform: translateY(28px);  transition: opacity .65s cubic-bezier(.25,.8,.25,1), transform .65s cubic-bezier(.25,.8,.25,1); }
+.reveal-left  { opacity: 0; transform: translateX(-36px); transition: opacity .65s cubic-bezier(.25,.8,.25,1), transform .65s cubic-bezier(.25,.8,.25,1); }
+.reveal-right { opacity: 0; transform: translateX(36px);  transition: opacity .65s cubic-bezier(.25,.8,.25,1), transform .65s cubic-bezier(.25,.8,.25,1); }
+.reveal-up.visible, .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: none; }
+
+/* Reversed */
+.reveal-up.hidden-up    { opacity: 0; transform: translateY(28px); }
+.reveal-left.hidden-up  { opacity: 0; transform: translateX(-36px); }
+.reveal-right.hidden-up { opacity: 0; transform: translateX(36px); }
+
+.td1 { transition-delay: .08s !important; }
+.td2 { transition-delay: .16s !important; }
+.td3 { transition-delay: .24s !important; }

@@ -1,0 +1,155 @@
+#contact {
+  background: var(--contact-bg, #ffffff);
+}
+
+#contact .contact-heading {
+  font-family: var(--font-heading) !important;
+  color: #000000 !important;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  text-transform: uppercase;
+}
+
+#contact .contact-subtext {
+  font-family: var(--font-body);
+  color: rgba(0, 0, 0, 0.75) !important;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.contact-input {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  color: #000000 !important;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-input::placeholder {
+  color: rgba(0, 0, 0, 0.40) !important;
+  font-family: var(--font-body);
+}
+
+.contact-input:focus {
+  background: #ffffff !important;
+  border-color: #4B7A08 !important;
+  box-shadow: 0 0 0 3px rgba(75, 122, 8, 0.15);
+}
+
+.contact-label {
+  font-family: var(--font-body);
+  font-size: 0.60rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #000000 !important;
+}
+
+.contact-form-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.contact-submit-btn {
+  font-family: var(--font-body);
+  background: #1a2e04 !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+.contact-submit-btn:hover {
+  background: #000000 !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.30) !important;
+}
+
+#formSuccess {
+  display: none;
+  font-family: var(--font-body);
+}
+
+#formSuccess.show { display: block; }
+
+#contact .max-w-4xl {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+@media (orientation: landscape) and (max-height: 560px) {
+  #contact .reveal-up:first-of-type {
+    padding-top: 24px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  #contact iframe { height: 180px !important; }
+  #contact .max-w-4xl {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  #contact .contact-heading { font-size: clamp(1.2rem, 4vw, 1.6rem); }
+  #contact .mb-8 { margin-bottom: 12px !important; }
+  .contact-form-card { padding: 14px 16px !important; border-radius: 10px; }
+  .contact-form-card .grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+  .contact-form-card .sm\:col-span-2 { grid-column: 1 / -1; }
+  .contact-input { padding: 7px 10px; font-size: 0.75rem; }
+  textarea.contact-input { min-height: 52px; }
+  .contact-label { font-size: 0.52rem; }
+}
+
+@media (max-width: 479px) and (orientation: portrait) {
+  #contact .max-w-4xl {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  #contact .contact-heading { font-size: clamp(1.5rem, 7vw, 2rem); }
+  #contact .contact-subtext {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  .contact-form-card { padding: 20px 16px !important; border-radius: 12px; }
+  .contact-form-card .grid { gap: 14px; }
+  .contact-input { padding: 9px 12px; font-size: 0.8rem; }
+  #contact iframe { height: 240px !important; }
+}
+
+@media (min-width: 480px) and (max-width: 767px) and (orientation: portrait) {
+  #contact .max-w-4xl {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  #contact .contact-heading { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .contact-form-card { padding: 24px !important; }
+  #contact iframe { height: 300px !important; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  #contact .max-w-4xl {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  #contact iframe { height: 380px !important; }
+}
+
+@media (min-width: 1024px) {
+  #contact iframe { height: 480px !important; }
+}

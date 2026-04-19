@@ -1,0 +1,153 @@
+#mission {
+  background: var(--mission-bg, #ffffff);
+  padding: 80px 0;
+}
+
+.mv-two-col-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.mv-card {
+  background: #fbfcf7;
+  border: 1.5px solid rgba(75,122,8,0.34);
+  border-radius: 20px;
+  padding: 80px 40px 48px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  box-shadow: 0 10px 28px rgba(75,122,8,0.10), inset 0 0 0 1px rgba(255, 255, 255, 0.56);
+  transition: transform .3s ease, box-shadow .3s ease;
+  box-sizing: border-box;
+  position: relative;
+  overflow: visible;
+  margin-top: 60px;
+}
+
+.mv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(75,122,8,0.14), inset 0 0 0 1px rgba(255, 255, 255, 0.66);
+}
+
+.mv-card-icon-wrap {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.mv-card-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(30%) sepia(60%) saturate(600%) hue-rotate(60deg) brightness(0.6);
+}
+
+.mv-card-label {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: #000000 !important;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.mv-card-desc {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #000000 !important;
+  max-width: 42ch;
+  text-align: left;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+  #mission { padding: 32px 0; }
+  .mv-two-col-wrap {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px;
+  }
+  .mv-card {
+    padding: 54px 16px 22px;
+    gap: 8px;
+    margin-top: 36px;
+    border-radius: 14px;
+    background: #fbfcf7;
+    border: 1.5px solid rgba(75,122,8,0.34);
+  }
+  .mv-card-icon-wrap { width: 74px; height: 74px; top: -37px; }
+  .mv-card-label { font-size: clamp(1.15rem, 5.6vw, 1.55rem); }
+  .mv-card-desc {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    max-width: 42ch;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  #mission {
+    padding: 36px 0 32px;
+  }
+
+  .mv-two-col-wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .mv-card {
+    padding: 52px 18px 24px;
+    gap: 8px;
+    margin-top: 44px;
+    border-radius: 14px;
+    background: #fbfcf7;
+    border: 1.5px solid rgba(75,122,8,0.34);
+  }
+
+  .mv-card-icon-wrap {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+  }
+
+  .mv-card-label {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+  }
+
+  .mv-card-desc {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #mission { padding: 64px 0; }
+  .mv-two-col-wrap { padding: 0 24px; gap: 28px; }
+  .mv-card { padding: 76px 28px 40px; margin-top: 56px; background: #fbfcf7; border: 1.5px solid rgba(75,122,8,0.34); }
+  .mv-card-icon-wrap { width: 110px; height: 110px; top: -56px; }
+  .mv-card-label { font-size: clamp(1.6rem, 2.5vw, 2.2rem); }
+  .mv-card-desc { font-size: 0.97rem; }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .mv-card { padding: 76px 32px 44px; background: #fbfcf7; border: 1.5px solid rgba(75,122,8,0.34); }
+}

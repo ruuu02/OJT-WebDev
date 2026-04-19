@@ -1,0 +1,280 @@
+.uf-clients {
+  background: var(--clients-bg, #ffffff);
+  padding: 48px 0 64px;
+}
+
+.uf-clients-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.uf-clients-title {
+  font-family: 'Anek Latin', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #1a2e04;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.uf-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+}
+
+.uf-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.uf-legend-title {
+  font-family: 'Anek Latin', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #2d6a00;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.uf-legend-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.uf-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+  justify-content: flex-start;
+}
+
+.uf-legend-pin {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.uf-legend-pin svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.uf-legend-label {
+  font-family: 'Anek Latin', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.uf-legend-subs {
+  padding: 0 0 4px 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.uf-legend-subs span {
+  font-family: 'Spline Sans', sans-serif;
+  font-size: 0.78rem;
+  color: #222;
+  font-weight: 500;
+  line-height: 1.65;
+  text-align: left;
+  display: block;
+}
+
+.uf-map-wrap {
+  width: 570px;
+  flex-shrink: 0;
+  margin-top: -16px;
+}
+
+.uf-map-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .uf-grid     { gap: 28px; }
+  .uf-legend   { width: 220px; }
+  .uf-map-wrap { width: 280px; margin-top: -8px; }
+}
+
+/* ── Portrait mobile ── */
+@media (max-width: 768px) and (orientation: portrait) {
+  .uf-clients {
+    padding: 32px 0 40px;
+  }
+
+  .uf-clients-inner {
+    padding: 0 16px;
+  }
+
+  .uf-clients-title {
+    margin-bottom: 20px;
+  }
+
+  .uf-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .uf-map-wrap {
+    width: 75%;
+    max-width: 300px;
+    order: 1;
+    align-self: center;
+    margin-top: -12px;
+  }
+
+  .uf-legend {
+    order: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8px;
+    row-gap: 8px;
+    align-items: start;
+  }
+
+  .uf-legend-title {
+    grid-column: 1 / -1;
+    font-size: 1.1rem;
+    text-align: left;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .uf-legend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .uf-legend-row {
+    gap: 6px;
+    padding: 2px 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .uf-legend-pin     { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
+  .uf-legend-pin svg { width: 18px; height: 18px; }
+
+  .uf-legend-label {
+    font-size: 0.72rem;
+    text-align: left;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  .uf-legend-subs {
+    display: none;
+  }
+}
+
+/* ── Landscape mobile — map on top, legend grid below ── */
+@media (max-width: 900px) and (orientation: landscape) {
+  .uf-clients {
+    padding: 32px 0 40px;
+  }
+
+  .uf-clients-inner {
+    padding: 0 20px;
+  }
+
+  .uf-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .uf-map-wrap {
+    width: 55%;
+    max-width: 340px;
+    order: 1;
+    align-self: center;
+    flex-shrink: 0;
+    margin-top: -10px;
+  }
+
+  .uf-legend {
+    order: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 8px;
+    align-items: start;
+  }
+
+  .uf-legend-title {
+    grid-column: 1 / -1;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .uf-legend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .uf-legend-row {
+    gap: 6px;
+    padding: 2px 0;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .uf-legend-pin     { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
+  .uf-legend-pin svg { width: 18px; height: 18px; }
+
+  .uf-legend-label {
+    font-size: 0.72rem;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  .uf-legend-subs {
+    display: none;
+  }
+}
+
+@media (max-width: 479px) and (orientation: portrait) {
+  .uf-clients-inner { padding: 0 14px; }
+  .uf-legend-title  { font-size: 1rem; }
+  .uf-legend-label  { font-size: 0.68rem; }
+}
+
+@media (max-width: 359px) and (orientation: portrait) {
+  .uf-clients-inner { padding: 0 12px; }
+  .uf-legend-title  { font-size: 0.95rem; }
+  .uf-legend-label  { font-size: 0.62rem; }
+}
