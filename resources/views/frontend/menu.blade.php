@@ -342,7 +342,7 @@
 
   {{-- Menu page interactions and animations --}}
   <button id="menuScrollTopBtn" class="menu-scroll-top" type="button" aria-label="{{ $cv('menu_scroll_top_aria', 'Back to top') }}" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-    <span id="menuScrollTopIcon" class="menu-scroll-top-icon" aria-hidden="true">{{ $cv('menu_scroll_top_icon', '↑') }}</span>
+    <span id="menuScrollTopIcon" class="menu-scroll-top-icon" aria-hidden="true">&uarr;</span>
   </button>
   @php
     $cmsTextStylesMenu = [];

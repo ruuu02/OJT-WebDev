@@ -128,13 +128,17 @@ body.popup-open {
 }
 
 .menu-scroll-top-icon {
-  font-size: 1.2rem;
+  width: 1em;
+  height: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
   line-height: 1;
   color: var(--btt-fg, #FFE100) !important;
   font-weight: 900;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
-  display: inline-block;
-  transform: scaleX(1.45);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Optional helper class for the imported font. */

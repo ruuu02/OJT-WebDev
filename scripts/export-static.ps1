@@ -23,6 +23,7 @@ $routes = @(
     '/brands/menu/products/category/powder-mixes',
     '/brands/menu/products/category/bouillon-cubes',
     '/brands/menu/products/category/noodles-and-pastas',
+    '/brands/menu/products/category/noodles-pastas-and-sauces',
     '/brands/menu/products/category/powdered-drinks',
     '/brands/menu/products/category/professional-series',
     '/brands/menu/products/bouillon-cubes/17-menu-chicken-broth-cubes',

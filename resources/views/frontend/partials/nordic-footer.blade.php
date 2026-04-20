@@ -102,7 +102,7 @@
 
     <div class="footer-right">
       <p class="footer-title" data-ve-field="nordic_footer_brands_title">{{ $cv('nordic_footer_brands_title', 'OUR BRANDS') }}</p>
-      <a href="{{ route('home') }}" class="footer-brand-logo" aria-label="Ultrafood">
+      <a href="/" class="footer-brand-logo" aria-label="Ultrafood">
         <img src="{{ $footerUltrafoodLogoSrc }}" alt="Ultrafood" />
       </a>
       <a href="{{ route('menu') }}" class="footer-brand-logo" aria-label="Menu Food">

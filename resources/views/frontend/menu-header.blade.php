@@ -83,6 +83,13 @@
       if (str_starts_with($value, '/')) return $value;
       return asset($value);
     };
+    $normalizeMenuProductHref = function (string $href): string {
+      return str_replace(
+        '/brands/menu/products/category/noodles-pastas-and-sauces',
+        '/brands/menu/products/category/noodles-and-pastas',
+        $href
+      );
+    };
 
     $defaultProductLinks = [
       ['label_key' => 'menu_nav_products_jelly_mixes', 'default' => 'Jelly Mixes', 'href_key' => 'menu_nav_products_jelly_mixes_url', 'href_default' => route('menu.products.category', ['category' => 'jelly-mixes']), 'icon_key' => 'menu_nav_products_jelly_mixes_icon', 'icon' => 'images/icons/Jelly-Mixes-Icon.svg'],
@@ -186,7 +193,7 @@
             @php
               $iconValue = $cv($link['icon_key'] ?? '', $link['icon'] ?? '');
               $iconSrc = $resolveIconSrc($iconValue);
-              $hrefValue = (string) $cv($link['href_key'] ?? '', $link['href_default'] ?? '#');
+              $hrefValue = $normalizeMenuProductHref((string) $cv($link['href_key'] ?? '', $link['href_default'] ?? '#'));
               $productLabelDisplay = (string) $cv($link['label_key'], $link['default']);
 
               $boostProductIconSlugs = [

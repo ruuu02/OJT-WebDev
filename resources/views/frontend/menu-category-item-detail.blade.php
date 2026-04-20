@@ -392,7 +392,7 @@
 
   @include('frontend.menu-footer')
   <button id="menuScrollTopBtn" class="menu-scroll-top" type="button" aria-label="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-    <span class="menu-scroll-top-icon" aria-hidden="true">↑</span>
+    <span class="menu-scroll-top-icon" aria-hidden="true">&uarr;</span>
   </button>
   <script>
     (function () {

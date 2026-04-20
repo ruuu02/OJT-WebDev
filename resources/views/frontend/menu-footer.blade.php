@@ -100,7 +100,7 @@
     <div class="menu-footer-links">
       <p class="menu-footer-social-title menu-footer-brands-title" id="menuFooterBrandsTitle" data-ve-field="menu_footer_brands_title">{{ $footerCv('menu_footer_brands_title', 'Our Brands') }}</p>
       <div class="menu-other-logos">
-        <a href="{{ route('home') }}" class="menu-other-logo-link" aria-label="Ultrafood page">
+        <a href="/" class="menu-other-logo-link" aria-label="Ultrafood page">
           <img src="{{ $ultrafoodOtherSrc }}" alt="Ultrafood logo" class="menu-other-logo" />
         </a>
         <a href="{{ route('nordic') }}" class="menu-other-logo-link" aria-label="Nordic page">
