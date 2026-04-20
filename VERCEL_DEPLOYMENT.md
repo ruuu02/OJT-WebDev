@@ -5,11 +5,11 @@ This repository deploys to Vercel as a static public showcase. The Laravel app i
 The repository includes:
 
 - `public/static`, pre-rendered HTML for the public showcase pages.
-- `vercel.json`, clean URL routes that point to those static HTML files and static assets.
+- `vercel.json`, file-based Vercel project settings that force the **Other** framework preset, skip dependency installs/builds, serve `public` as the output directory, and map clean URLs to the generated static HTML.
 - `scripts/export-static.ps1`, a local helper for regenerating the static HTML from Laravel.
 - `.vercelignore`, which uploads only `public` and `vercel.json` to Vercel so PHP/Composer is never bundled.
 
-After pushing these files, redeploy the project in Vercel. If Vercel asks for a framework preset, choose **Other**. Do not add a custom build command.
+After pushing these files, redeploy the project in Vercel. If Vercel asks for a framework preset, choose **Other**. Do not add a custom build command or install command; `vercel.json` already tells Vercel to deploy the `public` directory as static files.
 
 To regenerate the static showcase locally after changing Laravel pages or seeded content:
 

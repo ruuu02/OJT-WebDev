@@ -120,7 +120,9 @@
       if ($id === '') return $fallback;
       $row = $menuImagesById->get((int) $id);
       if (!$row || empty($row->filename)) return $fallback;
-      return asset('images/menu/' . ltrim((string) $row->filename, '/'));
+      $filename = ltrim((string) $row->filename, '/');
+      if (!file_exists(public_path('images/menu/' . $filename))) return $fallback;
+      return asset('images/menu/' . $filename);
     };
 
     $menuCategoriesHeadingSrc = $resolveMenuImgSrc(
@@ -171,7 +173,12 @@
 
     $menuVideoBannerType = 'file';
     if ($menuVideoBannerRaw === '') {
-      $menuVideoBannerSrc = asset('videos/menu/menu-banner.mp4');
+      if (file_exists(public_path('videos/menu/menu-banner.mp4'))) {
+        $menuVideoBannerSrc = asset('videos/menu/menu-banner.mp4');
+      } else {
+        $menuVideoBannerType = 'image';
+        $menuVideoBannerSrc = '';
+      }
     } else {
       $youtubeId = $extractYouTubeId($menuVideoBannerRaw);
       if ($youtubeId !== '') {
@@ -274,6 +281,13 @@
                 allowfullscreen
                 referrerpolicy="strict-origin-when-cross-origin"
               ></iframe>
+            @elseif ($menuVideoBannerType === 'image')
+              <img
+                class="menu-video-banner-media"
+                src="{{ $menuVideoBannerPoster }}"
+                alt="Menu highlight"
+                loading="lazy"
+              />
             @else
               <video
                 class="menu-video-banner-media"

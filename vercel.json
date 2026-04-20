@@ -1,33 +1,37 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": "public",
   "routes": [
     {
       "src": "/favicon.ico",
-      "dest": "/public/favicon.ico"
+      "dest": "/favicon.ico"
     },
     {
       "src": "/robots.txt",
-      "dest": "/public/robots.txt"
+      "dest": "/robots.txt"
     },
     {
       "src": "/(css|js|images|videos|build)/(.*)",
-      "dest": "/public/$1/$2"
+      "dest": "/$1/$2"
     },
     {
       "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|webp|avif|mp4|webm|woff|woff2|ttf|eot|pdf|txt))",
-      "dest": "/public/$1"
+      "dest": "/$1"
     },
     {
       "src": "/",
-      "dest": "/public/static/index.html"
+      "dest": "/static/index.html"
     },
     {
       "src": "/(.+)/",
-      "dest": "/public/static/$1/index.html"
+      "dest": "/static/$1/index.html"
     },
     {
       "src": "/(.+)",
-      "dest": "/public/static/$1/index.html"
+      "dest": "/static/$1/index.html"
     }
   ]
 }
