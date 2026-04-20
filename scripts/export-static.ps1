@@ -192,6 +192,8 @@ try {
         $html = Get-Content -LiteralPath $dest -Raw
         $html = $html -replace "http://127\.0\.0\.1:$port", ''
         $html = $html -replace "https://127\.0\.0\.1:$port", ''
+        $html = $html -replace "http:\\/\\/127\.0\.0\.1:$port", ''
+        $html = $html -replace "https:\\/\\/127\.0\.0\.1:$port", ''
         Set-Content -LiteralPath $dest -Value $html -Encoding UTF8
 
         Write-Host "exported $route"
