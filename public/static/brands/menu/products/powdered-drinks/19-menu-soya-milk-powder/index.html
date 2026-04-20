@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Menu Soya Milk Powder</title>
+  <link rel="icon" type="image/png" href="/images/logo/e2288ce5-75d7-4fc3-a4b2-8fb3642a811a.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/menu/menu.css" />
+  <style>
+    /* Page-only override: remove the white rounded shell card on item detail */
+    .menu-bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+    .menu-product-detail-shell {
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      --menu-item-info-offset: 0px;
+    }
+
+    /* Page-only override: make product image look like a cut-out */
+    .menu-product-gallery-main {
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      overflow: visible;
+      aspect-ratio: auto;
+      perspective: 1400px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      width: min(100%, 320px);
+      margin: 0 auto;
+    }
+
+    .menu-product-gallery-main img:not(.menu-product-flip-face) {
+      object-fit: contain;
+      filter: drop-shadow(0 16px 24px rgba(15, 23, 42, 0.22));
+      transform: none;
+      background: transparent;
+    }
+
+    .menu-product-detail-screen .menu-product-gallery-main:hover,
+    .menu-product-detail-screen .menu-product-gallery-main:focus-visible {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    .menu-product-detail-screen .menu-product-gallery-main:hover img:not(.menu-product-flip-face),
+    .menu-product-detail-screen .menu-product-gallery-main:focus-visible img:not(.menu-product-flip-face) {
+      transform: none !important;
+      filter: drop-shadow(0 16px 24px rgba(15, 23, 42, 0.22)) !important;
+    }
+
+    .menu-product-flip-card {
+      --menu-detail-image-height: 360px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: min(100%, 320px);
+      margin: 0 auto;
+      perspective: 1200px;
+      -webkit-perspective: 1200px;
+    }
+
+    .menu-product-flip-card__inner {
+      position: relative;
+      width: 100%;
+      height: var(--menu-detail-image-height);
+      margin: 0 auto;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      transition: transform 700ms cubic-bezier(0.22, 0.7, 0.18, 1);
+      will-change: transform;
+      transform-origin: center center;
+    }
+
+    .menu-product-flip-face {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      background: transparent;
+      border-radius: 10px;
+      display: block;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: rotateY(0deg) translateZ(1px);
+      -webkit-transform: rotateY(0deg) translateZ(1px);
+      box-shadow: none;
+      opacity: 1;
+    }
+
+    .menu-product-flip-face.is-back {
+      transform: rotateY(180deg) translateZ(1px);
+      -webkit-transform: rotateY(180deg) translateZ(1px);
+    }
+
+    .menu-product-flip-card.is-flipped .menu-product-flip-card__inner {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+    }
+
+    .menu-product-flip-hint {
+      margin: 8px 0 0;
+      text-align: center;
+      font-size: 12px;
+      color: #820c0c;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* Center image block so it doesn't sit to the left */
+    .menu-product-gallery {
+      justify-content: center;
+      padding-top: 0;
+    }
+
+    .menu-product-info {
+      margin-top: calc(-1 * var(--menu-item-info-offset));
+    }
+
+    .menu-product-info__title {
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    @media (min-width: 901px) {
+      .menu-product-info__title {
+        font-size: clamp(34px, 3vw, 48px);
+        line-height: 1.1;
+      }
+
+      .menu-product-info__desc {
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
+      .menu-product-buy-strip {
+        padding: 14px 18px 16px;
+        border-radius: 28px;
+      }
+
+      .menu-product-buy-link {
+        min-height: 56px;
+        font-size: 13px;
+        border-radius: 16px;
+      }
+
+      .menu-product-buy-link img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    .menu-product-gallery-stage {
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 320px);
+      justify-content: center;
+      justify-items: center;
+      margin: 0 auto;
+      gap: 0;
+      transform: none;
+    }
+
+    .menu-product-flip-trigger {
+      cursor: default;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      display: block;
+      width: min(100%, 320px);
+      margin: 0 auto;
+    }
+
+    .menu-product-flip-trigger.is-flippable,
+    .menu-product-flip-trigger.is-flippable:hover {
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .menu-product-flip-card {
+        --menu-detail-image-height: 270px;
+      }
+
+      /* menu-products.css uses display:contents for the info panel on small screens,
+         so add spacing on the first info row instead. */
+      .menu-product-info__row--title {
+        margin-top: calc(-1 * var(--menu-item-info-offset));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .menu-product-flip-card {
+        --menu-detail-image-height: 240px;
+      }
+    }
+
+    .menu-product-flip-trigger:focus-visible {
+      outline: 2px solid #f37321;
+      outline-offset: 6px;
+    }
+
+  </style>
+</head>
+<body class="menu-page menu-product-detail-screen">
+  <img src="/images/menu/Menu-Background-New.png" alt="Menu Background" class="menu-bg-image" />
+
+  
+  <header class="site-header">
+  
+  
+  <div class="header-inner">
+    <a href="/brands/menu" class="brand-block brand-link" aria-label="Go to Menu landing page">
+      <img
+        src="/images/logo/e2288ce5-75d7-4fc3-a4b2-8fb3642a811a.png"
+        alt="Menu logo"
+        class="brand-logo"
+      />
+      <img
+        src="/images/logo/Menu-menutong-Sarap.png"
+        alt="Menu Menutong Sarap"
+        class="brand-wordmark-image"
+      />
+    </a>
+
+    <button id="burgerBtn" class="burger-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="mainNav" class="main-nav">
+      <a href="/brands/menu" class="nav-btn nav-btn-home" data-ve-field="menu_nav_home"  style="font-size:16px;color:#18212f" >Home</a>
+
+      <details class="dropdown is-active">
+        <summary class="nav-btn nav-btn-home nav-btn-dropdown is-active" data-ve-field="menu_nav_products"  style="color:#18212f" >Products</summary>
+        <div class="dropdown-menu">
+                                  <a href="/brands/menu/products/category/jelly-mixes">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                  <img src="/images/icons/1cc637c5-01b4-4e90-b6e2-e2a7be8decf4.png" alt="" />
+                              </span>
+              <span data-ve-field="menu_nav_products_item_1_label"  style="color:#18212f" >Jelly Mixes</span>
+            </a>
+                                  <a href="/brands/menu/products/category/breading-mixes">
+              <span class="dd-icon dd-icon-mono dd-icon--boost" aria-hidden="true">
+                                  <img src="/images/icons/f97a1ec8-4d78-4e43-ad34-3e1d9e4d67ef.png" alt="" />
+                              </span>
+              <span data-ve-field="menu_nav_products_item_2_label"  style="color:#18212f" >Breading Mixes</span>
+            </a>
+                                  <a href="/brands/menu/products/category/powder-mixes">
+              <span class="dd-icon dd-icon-mono dd-icon--boost" aria-hidden="true">
+                                  <img src="/images/icons/687ac99e-8b9a-4408-990c-c8fa3a54c8b0.png" alt="" />
+                              </span>
+              <span data-ve-field="menu_nav_products_item_3_label"  style="color:#18212f" >Powder Mixes</span>
+            </a>
+                                  <a href="/brands/menu/products/category/bouillon-cubes">
+              <span class="dd-icon dd-icon-mono dd-icon--boost" aria-hidden="true">
+                                  <img src="/images/icons/f064f581-4415-4133-9943-7f5344acdd9d.png" alt="" />
+                              </span>
+              <span data-ve-field="menu_nav_products_item_4_label"  style="color:#18212f" >Bouillon Cubes</span>
+            </a>
+                                  <a href="/brands/menu/products/category/noodles-pastas-and-sauces">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                  <img src="/images/icons/571c6d56-4aab-4f85-b7ba-8392eecd4317.png" alt="" />
+                              </span>
+              <span data-ve-field="menu_nav_products_item_5_label"  style="color:#18212f" >Noodles, Pastas, and Sauces</span>
+            </a>
+                                  <a href="/brands/menu/products/category/powdered-drinks">
+              <span class="dd-icon dd-icon-mono dd-icon--boost" aria-hidden="true">
+                                  <img src="/images/icons/c0c6ed5e-fc59-489f-8dbe-582af56a0554.png" alt="" />
+                              </span>
+              <span data-ve-field="menu_nav_products_item_6_label"  style="color:#18212f" >Powdered Drinks</span>
+            </a>
+                                  <a href="/brands/menu/products/category/professional-series">
+              <span class="dd-icon dd-icon-mono dd-icon--boost" aria-hidden="true">
+                                  <img src="/images/icons/587814f1-1967-483a-a013-fc4b3b37b31e.png" alt="" />
+                              </span>
+              <span data-ve-field="menu_nav_products_item_7_label"  style="color:#18212f" >Professional Series</span>
+            </a>
+                  </div>
+      </details>
+
+      <details class="dropdown">
+        <summary class="nav-btn nav-btn-home nav-btn-dropdown" data-ve-field="menu_nav_recipes"  style="color:#18212f" >Recipes</summary>
+        <div class="dropdown-menu">
+                                  <a href="/brands/menu/recipes/appetizers">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                                  <img src="/images/menu/Appetizers.png" alt="" />
+                              </span><span  data-ve-field="menu_nav_recipe_category_1_label"   style="font-size:16px;color:#000000" >Appetizers</span>
+            </a>
+                                  <a href="/brands/menu/recipes/soups">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                                  <img src="/images/menu/Soups.png" alt="" />
+                              </span><span  data-ve-field="menu_nav_recipe_category_2_label"   style="color:#000000" >Soups</span>
+            </a>
+                                  <a href="/brands/menu/recipes/main-dishes">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                                  <img src="/images/menu/Main-Dishes.png" alt="" />
+                              </span><span  data-ve-field="menu_nav_recipe_category_3_label"   style="color:#000000" >Main Dishes</span>
+            </a>
+                                  <a href="/brands/menu/recipes/noodles-and-pastas">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                                  <img src="/images/menu/Noodles-and-Pastas.png" alt="" />
+                              </span><span  data-ve-field="menu_nav_recipe_category_4_label"   style="color:#000000" >Noodles and Pastas</span>
+            </a>
+                                  <a href="/brands/menu/recipes/drinks">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                                  <img src="/images/menu/Drinks.png" alt="" />
+                              </span><span  data-ve-field="menu_nav_recipe_category_5_label"   style="color:#000000" >Drinks</span>
+            </a>
+                                  <a href="/brands/menu/recipes/desserts">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                                  <img src="/images/menu/Desserts.png" alt="" />
+                              </span><span  data-ve-field="menu_nav_recipe_category_6_label"   style="color:#000000" >Desserts</span>
+            </a>
+                  </div>
+      </details>
+
+      <details class="dropdown">
+        <summary class="nav-btn nav-btn-home nav-btn-dropdown" data-ve-field="menu_nav_buy_now"  style="color:#18212f" >Buy Now</summary>
+        <div class="dropdown-menu">
+                                  <a href="https://shopee.ph/ultrafooddistributorsinc?categoryId=100629&amp;entryPoint=ShopByPDP&amp;itemId=1381695714&amp;upstream=search">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                  <img src="/images/icons/30fc90a1-ca55-4b07-9987-a41ad430e32b.svg" alt="" />
+                              </span><span data-ve-field="menu_nav_buy_now_shopee"  style="color:#18212f" >Shopee</span>
+            </a>
+                                  <a href="https://shopee.ph/menuphilippines?entryPoint=ShopBySearch&amp;searchKeyword=menu%20store">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                  <img src="/images/icons/5c6ea3cc-863e-4ece-a1a8-0d6841b240c1.svg" alt="" />
+                              </span><span data-ve-field="menu_nav_buy_now_shopee_mall"  style="color:#18212f" >Shopee Mall</span>
+            </a>
+                                  <a href="https://www.lazada.com.ph/shop/menu?path=index.htm&amp;lang=en&amp;pageTypeId=1">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                  <img src="/images/icons/fc717277-d3e8-43c8-9993-377d5924df08.svg" alt="" />
+                              </span><span data-ve-field="menu_nav_buy_now_lazada"  style="color:#18212f" >Lazada</span>
+            </a>
+                                  <a href="https://vt.tiktok.com/ZSuBR7RTA/?page=TikTokShop">
+              <span class="dd-icon dd-icon-mono" aria-hidden="true">
+                                  <img src="/images/icons/4d4465d9-8e41-4638-812a-6e25c8627213.svg" alt="" />
+                              </span><span data-ve-field="menu_nav_buy_now_tiktok_shop"  style="color:#18212f" >TikTok Shop</span>
+            </a>
+                  </div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+  <div class="page-content">
+    <main class="menu-product-detail-page">
+      <section class="menu-product-detail-shell">
+        <p class="menu-product-detail-breadcrumbs">
+          <a href="/brands/menu">Home</a>
+          <span aria-hidden="true">&gt;</span>
+          <a href="/brands/menu/products/category/powdered-drinks">Powdered Drinks</a>
+          <span aria-hidden="true">&gt;</span>
+          <span class="is-current">Menu Soya Milk Powder</span>
+        </p>
+
+        <div class="menu-product-detail-layout">
+          <section class="menu-product-gallery" aria-label="Menu Soya Milk Powder image">
+            <div class="menu-product-gallery-stage">
+              <figure class="menu-product-gallery-main" aria-label="Menu Soya Milk Powder main image">
+                                  <button
+                    type="button"
+                    class="menu-product-flip-trigger is-flippable"
+                    id="menuProductZoomTrigger"
+                    aria-label="Flip Menu Soya Milk Powder image"
+                  >
+                    <span class="menu-product-flip-card" id="menuProductFlipCard"  aria-pressed="false" >
+                      <span class="menu-product-flip-card__inner">
+                        <img src="/images/banner/aHgNxo2CAWS17pAAm0WmagG4Bm4pgvkP39Tvnx4l.png" alt="Menu Soya Milk Powder front image" class="menu-product-flip-face is-front" loading="lazy" />
+                                                  <img src="/images/banner/vkYhD5nHJUWjTPJVqKkIxjSnOGmjqD1EilX5ce4x.png" alt="Menu Soya Milk Powder back image" class="menu-product-flip-face is-back" loading="lazy" />
+                                              </span>
+                    </span>
+                  </button>
+                              </figure>
+                              <p class="menu-product-flip-hint">Click image to flip and view the back</p>
+                          </div>
+          </section>
+
+          <aside class="menu-product-info" data-category-slug="powdered-drinks">
+                        <div class="menu-product-info__panel">
+              <div class="menu-product-info__row menu-product-info__row--title">
+                <h1 class="menu-product-info__title" data-ve-field="mcli_19_name" >Menu Soya Milk Powder</h1>
+              </div>
+
+                                            <div class="menu-product-info__row menu-product-info__row--desc">
+                  <p
+                    class="menu-product-info__desc"
+                    data-ve-field="menu_item_19_description"
+                  >
+                    <span class="menu-product-info__desc-text">Soya Milk Drink Powder is a finely processed beverage mix made from soybean solids and complementary ingredients, delivering a smooth, creamy, and mildly sweet flavor profile. It is designed for easy preparation as a nutritious drink and can be served hot or cold. The powdered format ensures convenient handling, quick dissolution, and consistent taste.</span><button
+                      type="button"
+                      class="menu-product-info__desc-toggle"
+                      aria-expanded="false"
+                      hidden
+                    >
+                      See more
+                    </button>
+                  </p>
+                </div>
+                          </div>
+
+                        <div class="menu-product-buy-strip" aria-label="Buy Menu Soya Milk Powder">
+              <a
+                href="https://www.lazada.com.ph/products/pdp-i289212025-s466318865.html?c=&amp;channelLpJumpArgs=&amp;clickTrackInfo=query%253Amenu%252Bfood%252Bsolutions%253Bnid%253A289212025%253Bsrc%253ALazadaMainSrp%253Brn%253Aaee72f59281ccf1e3cd070e9dc8561e9%253Bregion%253Aph%253Bsku%253A289212025_PH%253Bprice%253A90%253Bclient%253Adesktop%253Bsupplier_id%253A100054879%253Bsession_id%253A%253Bbiz_source%253Ah5_hp%253Bslot%253A38%253Butlog_bucket_id%253A470687%253Basc_category_id%253A24532%253Bitem_id%253A289212025%253Bsku_id%253A466318865%253Bshop_id%253A2662%253BtemplateInfo%253A107881_E%2523-1_A3_C%2523&amp;freeshipping=1&amp;fs_ab=2&amp;fuse_fs=&amp;lang=en&amp;location=Metro%20Manila~Valenzuela&amp;price=9E%201&amp;priceCompare=skuId%3A466318865%3Bsource%3Alazada-search-voucher%3Bsn%3Aaee72f59281ccf1e3cd070e9dc8561e9%3BoriginPrice%3A9000%3BdisplayPrice%3A9000%3BsinglePromotionId%3A-1%3BsingleToolCode%3A-1%3BvoucherPricePlugin%3A0%3Btimestamp%3A1774430958257&amp;ratingscore=4.915057915057915&amp;request_id=aee72f59281ccf1e3cd070e9dc8561e9&amp;review=518&amp;sale=2452&amp;search=1&amp;source=search&amp;spm=a2o4l.searchlist.list.38&amp;stock=1"
+                class="menu-product-buy-link"
+                aria-label="Buy on Lazada"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-ve-field="menu_item_19_lazada_url"
+              >
+                <img src="/images/icons/ecommerce/lazada-logo.svg" alt="Lazada logo" loading="lazy" />
+                <span>Lazada</span>
+              </a>
+              <a
+                href="https://shopee.ph/Menu-Soya-Milk-Drink-Powder-21g-x-10-Packs-i.81196450.1948038626?extraParams=%7B%22display_model_id%22%3A62045363559%2C%22model_selection_logic%22%3A3%7D"
+                class="menu-product-buy-link"
+                aria-label="Buy on Shopee"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-ve-field="menu_item_19_shopee_url"
+              >
+                <img src="/images/icons/ecommerce/shopee-logo.svg" alt="Shopee logo" loading="lazy" />
+                <span>Shopee</span>
+              </a>
+                              <a
+                  href="https://shopee.ph/Menu-Soya-Milk-Drink-Powder-21g-x-10-Packs-i.877858256.23619849111?extraParams=%7B%22display_model_id%22%3A107906385557%2C%22model_selection_logic%22%3A3%7D"
+                  class="menu-product-buy-link"
+                  aria-label="Buy on Shopee Mall"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-ve-field="menu_item_19_shopee_mall_url"
+                >
+                  <img src="/images/icons/ecommerce/shopee-mall-logo.svg" alt="Shopee Mall logo" loading="lazy" />
+                  <span>Shopee Mall</span>
+                </a>
+                            <a
+                href="https://vt.tiktok.com/ZSkSUt5HA/?page=TikTokShop"
+                class="menu-product-buy-link"
+                aria-label="Buy on TikTok Shop"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-ve-field="menu_item_19_tiktok_url"
+              >
+                <img src="/images/icons/ecommerce/tiktok-shop-logo.svg" alt="TikTok Shop logo" loading="lazy" />
+                <span>TikTok Shop</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="menu-footer">
+  
+  <div class="menu-footer-inner">
+    <div class="menu-footer-contact">
+      <div class="menu-footer-contact-row">
+        <div class="menu-footer-brand">
+          <a href="/brands/menu" aria-label="Go to Menu landing page">
+            <img src="/images/logo/e2288ce5-75d7-4fc3-a4b2-8fb3642a811a.png" alt="Menu Food logo" class="menu-footer-logo" />
+          </a>
+        </div>
+        <div class="menu-footer-contact-copy">
+          <p class="menu-footer-social-title menu-footer-contact-title" data-ve-field="menu_footer_contact_title">Contact Us</p>
+          <p><strong data-ve-field="menu_footer_contact_label">Contact Number:</strong> <span data-ve-field="menu_footer_contact_number">+1 234 567 890</span></p>
+          <p><strong data-ve-field="menu_footer_customer_service_label">Customer Service:</strong> <span data-ve-field="menu_footer_customer_service_number">+1 234 000 111</span></p>
+          <p><strong data-ve-field="menu_footer_email_label">Email:</strong> <a href="mailto:ultrafood05@google.com" data-ve-field="menu_footer_email">ultrafood05@google.com</a></p>
+          <p><strong data-ve-field="menu_footer_customer_email_label">Customer Service Email:</strong> <a href="mailto:customerservice@menufood.com" data-ve-field="menu_footer_customer_email">customerservice@menufood.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-footer-social">
+      <p class="menu-footer-social-title" id="menuFooterFollowTitle" data-ve-field="menu_footer_follow_title">Follow Us</p>
+      <div class="menu-social-icons">
+        <a href="https://www.facebook.com/menuproducts/" aria-label="Facebook" class="menu-social-link" title="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/menufoodsolutions/reels/?hl=af" aria-label="Instagram" class="menu-social-link" title="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.9 1.35a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@menufoodsolutions" aria-label="TikTok" class="menu-social-link" title="TikTok" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 3h2.3a4.8 4.8 0 0 0 3.2 3.2v2.34a7.05 7.05 0 0 1-3.2-.78v6.02a5.8 5.8 0 1 1-5.03-5.76v2.4a3.45 3.45 0 1 0 2.7 3.36V3Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-footer-links">
+      <p class="menu-footer-social-title menu-footer-brands-title" id="menuFooterBrandsTitle" data-ve-field="menu_footer_brands_title">Our Brands</p>
+      <div class="menu-other-logos">
+        <a href="" class="menu-other-logo-link" aria-label="Ultrafood page">
+          <img src="/images/logo/65480775-6edc-4e3e-b8c4-f989fe69c17c.png" alt="Ultrafood logo" class="menu-other-logo" />
+        </a>
+        <a href="/brands/nordic" class="menu-other-logo-link" aria-label="Nordic page">
+          <img src="/images/logo/Korpala-Nordic-Logo.png" alt="Nordic logo" class="menu-other-logo" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+        <style id="menu-footer-cms-text-styles">
+                      .menu-footer [data-ve-field="menu_footer_brands_title"] { color:#17284a !important }
+      .menu-footer a[data-ve-field="menu_footer_brands_title"] { color:#17284a !important }
+                          .menu-footer [data-ve-field="menu_footer_facebook_url"] { color:#000000 !important }
+      .menu-footer a[data-ve-field="menu_footer_facebook_url"] { color:#000000 !important }
+                          .menu-footer [data-ve-field="menu_footer_instagram_url"] { color:#000000 !important }
+      .menu-footer a[data-ve-field="menu_footer_instagram_url"] { color:#000000 !important }
+                          .menu-footer [data-ve-field="menu_footer_tiktok_url"] { color:#000000 !important }
+      .menu-footer a[data-ve-field="menu_footer_tiktok_url"] { color:#000000 !important }
+            </style>
+    <script src="/js/menu.js"></script>
+  <button id="menuScrollTopBtn" class="menu-scroll-top" type="button" aria-label="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <span class="menu-scroll-top-icon" aria-hidden="true">â†‘</span>
+  </button>
+  <script>
+    (function () {
+      const trigger = document.getElementById('menuProductZoomTrigger');
+      const flipCard = document.getElementById('menuProductFlipCard');
+      const hasFlipImages = true;
+
+      if (!trigger || !flipCard) return;
+
+      const setFlipState = (isFlipped) => {
+        if (!flipCard || !hasFlipImages) return;
+        flipCard.classList.toggle('is-flipped', isFlipped);
+        flipCard.setAttribute('aria-pressed', isFlipped ? 'true' : 'false');
+      };
+
+      trigger.addEventListener('click', () => {
+        if (!hasFlipImages) return;
+        setFlipState(!flipCard.classList.contains('is-flipped'));
+      });
+
+      trigger.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          if (!hasFlipImages) return;
+          setFlipState(!flipCard.classList.contains('is-flipped'));
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
+

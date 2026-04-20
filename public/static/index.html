@@ -65,21 +65,48 @@
     --btt-fg:#ffffff;
     --btt-hover-bg:#1a2e04;
   }
-  #header     {  }
+  #header     { --header-bg:#ffffff; }
   #hero       {  }
   #about      {  }
   #mission    {  }
   #strengths  {  }
   #brands     {  }
-  #history    {  }
+  #history    { --history-bg:#ffffff; }
   #clients    {  }
   #contact    { --contact-bg:#79ce1b; }
-  footer      {  }
+  footer      { --footer-bg:#ffffff; }
 </style>
 
 
 
 
+<style>
+  #brandNordicCard .px-6 { color:#000000 !important }
+  #contactForm { color:#000000 !important }
+  #brandNordicCard .px-6 [data-ve-field=&quot;brand_nordic_title&quot;] { color:#000000 !important }
+  #brandNordicCard .px-6 [data-ve-field=&quot;brand_nordic_tagline&quot;] { color:#000000 !important }
+  #brandNordicCard .px-6 [data-ve-field=&quot;brand_nordic_desc&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_company_label&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_company_ph&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_industry_label&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_industry_ph&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_name_label&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_name_ph&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_email_label&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_email_ph&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_message_label&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_message_ph&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_submit&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_success&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_send_to_email&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_smtp_host&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_smtp_port&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_smtp_encryption&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_smtp_username&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_smtp_password&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_mail_from_email&quot;] { color:#000000 !important }
+  #contactForm [data-ve-field=&quot;contact_form_mail_from_name&quot;] { color:#000000 !important }
+</style>
 
 
 <header id="header" class="fixed top-0 z-50 px-6 lg:px-10">
@@ -172,7 +199,7 @@
       src="/images/ultrafood/Ultrafood-Floater-1.png"
       alt=""
       class="uf-floater-media reveal-right td1"
-            loading="lazy"
+       style="width: 1132px; max-width: none; height: 581px; object-fit: contain"       loading="lazy"
       decoding="async"
     />
   </div>
@@ -206,7 +233,7 @@
 <div class="uf-floater-band uf-floater-band--strengths" aria-hidden="true">
   <div class="uf-floater uf-floater--left">
     <img
-      src="/images/ultrafood/Ultrafood-Floater-2.png"
+      src="/images/banner/7c79f6ad-2ce1-4517-888c-9620aea1780b.png"
       alt=""
       class="uf-floater-media reveal-left td2"
             loading="lazy"
@@ -284,7 +311,7 @@
 <div class="uf-floater-band uf-floater-band--brands" aria-hidden="true">
   <div class="uf-floater uf-floater--right">
     <img
-      src="/images/ultrafood/Ultrafood-Floater-3.png"
+      src="/images/banner/7451db1e-ba59-450c-9b7d-3f218808e63f.png"
       alt=""
       class="uf-floater-media reveal-right td3"
             loading="lazy"
@@ -330,7 +357,7 @@
                class="brand-nordic-logo w-auto" />
         </div>
         <div class="px-6 py-5">
-          <h3 class="font-display text-xl font-bold mb-1.5 brand-card-title">Nordic Foods PH</h3>
+          <h3 class="font-display text-xl font-bold mb-1.5 brand-card-title">Nordic Foods Philippines</h3>
           <p class="text-xs leading-relaxed font-bold italic brand-card-tagline">
             &ldquo;Finland straight to your taste buds.&rdquo;
           </p>
@@ -695,7 +722,7 @@
       data-submit-url="/contact/send"
       data-page-slug="ultrafood"
     >
-      <input type="hidden" name="_token" value="j7ROulqZpw0IWHqLor790jjNuJkdKaSzbVUwP99n" autocomplete="off">      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <input type="hidden" name="_token" value="phI5lTJkuVxKKewfUiJXTEuuAazTCW4jWrcF9vhF" autocomplete="off">      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
         <div class="flex flex-col gap-1.5">
           <label class="contact-label">Company Name</label>
@@ -756,7 +783,7 @@
           <h2 class="ultrafood-footer-contact-heading" data-ve-field="ultrafood_footer_contact_us_title">Contact Us</h2>
           <p><strong data-ve-field="ultrafood_footer_contact_label">Contact Number:</strong> <span data-ve-field="ultrafood_footer_contact_number">+1 234 567 890</span></p>
           <p><strong data-ve-field="ultrafood_footer_customer_service_label">Customer Service:</strong> <span data-ve-field="ultrafood_footer_customer_service_number">+1 234 000 111</span></p>
-          <p><strong data-ve-field="ultrafood_footer_email_label">Email:</strong> <a data-ve-field="ultrafood_footer_email" href="mailto:ultrafood05@google.com">ultrafood05@google.com</a></p>
+          <p><strong data-ve-field="ultrafood_footer_email_label">Email:</strong> <a data-ve-field="ultrafood_footer_email" href="mailto:ultrafood05@gmail.com">ultrafood05@gmail.com</a></p>
           <p><strong data-ve-field="ultrafood_footer_customer_email_label">Customer Service Email:</strong> <a data-ve-field="ultrafood_footer_customer_email" href="mailto:customerservice@menufood.com">customerservice@menufood.com</a></p>
         </div>
         <div class="ultrafood-footer-copy-wrap">
@@ -780,6 +807,78 @@
 </button>
 
 
+<style id="ultrafood-cms-text-styles">
+  [data-ve-field="menu_footer_contact_label"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_footer_contact_label"] { color:#000000 !important }
+  [data-ve-field="menu_footer_contact_number"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_footer_contact_number"] { color:#000000 !important }
+  [data-ve-field="menu_footer_customer_service_label"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_footer_customer_service_label"] { color:#000000 !important }
+  [data-ve-field="menu_footer_customer_service_number"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_footer_customer_service_number"] { color:#000000 !important }
+  [data-ve-field="menu_footer_email_label"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_footer_email_label"] { color:#000000 !important }
+  [data-ve-field="menu_footer_email"] { color:#c33232 !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_footer_email"] { color:#c33232 !important }
+  [data-ve-field="menu_footer_customer_email_label"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_footer_customer_email_label"] { color:#000000 !important }
+  [data-ve-field="menu_footer_customer_email"] { color:#c33232 !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_footer_customer_email"] { color:#c33232 !important }
+  [data-ve-field="menu_item_1_description"] { color:#41506a !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_item_1_description"] { color:#41506a !important }
+  [data-ve-field="menu_item_1_lazada_url"] { color:#4b2bbd !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_item_1_lazada_url"] { color:#4b2bbd !important }
+  [data-ve-field="menu_item_1_shopee_url"] { color:#d3610a !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_item_1_shopee_url"] { color:#d3610a !important }
+  [data-ve-field="menu_item_1_tiktok_url"] { color:#111111 !important }
+  .ultrafood-footer-contact a[data-ve-field="menu_item_1_tiktok_url"] { color:#111111 !important }
+  [data-ve-field="contact_form_company_label"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_company_label"] { color:#000000 !important }
+  [data-ve-field="contact_form_company_ph"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_company_ph"] { color:#000000 !important }
+  [data-ve-field="contact_form_industry_label"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_industry_label"] { color:#000000 !important }
+  [data-ve-field="contact_form_industry_ph"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_industry_ph"] { color:#000000 !important }
+  [data-ve-field="contact_form_name_label"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_name_label"] { color:#000000 !important }
+  [data-ve-field="contact_form_name_ph"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_name_ph"] { color:#000000 !important }
+  [data-ve-field="contact_form_email_label"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_email_label"] { color:#000000 !important }
+  [data-ve-field="contact_form_email_ph"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_email_ph"] { color:#000000 !important }
+  [data-ve-field="contact_form_message_label"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_message_label"] { color:#000000 !important }
+  [data-ve-field="contact_form_message_ph"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_message_ph"] { color:#000000 !important }
+  [data-ve-field="contact_form_submit"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_submit"] { color:#000000 !important }
+  [data-ve-field="contact_form_success"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_success"] { color:#000000 !important }
+  [data-ve-field="contact_form_send_to_email"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_send_to_email"] { color:#000000 !important }
+  [data-ve-field="contact_form_smtp_host"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_smtp_host"] { color:#000000 !important }
+  [data-ve-field="contact_form_smtp_port"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_smtp_port"] { color:#000000 !important }
+  [data-ve-field="contact_form_smtp_encryption"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_smtp_encryption"] { color:#000000 !important }
+  [data-ve-field="contact_form_smtp_username"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_smtp_username"] { color:#000000 !important }
+  [data-ve-field="contact_form_smtp_password"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_smtp_password"] { color:#000000 !important }
+  [data-ve-field="contact_form_mail_from_email"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_mail_from_email"] { color:#000000 !important }
+  [data-ve-field="contact_form_mail_from_name"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="contact_form_mail_from_name"] { color:#000000 !important }
+  [data-ve-field="brand_nordic_title"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="brand_nordic_title"] { color:#000000 !important }
+  [data-ve-field="brand_nordic_tagline"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="brand_nordic_tagline"] { color:#000000 !important }
+  [data-ve-field="brand_nordic_desc"] { color:#000000 !important }
+  .ultrafood-footer-contact a[data-ve-field="brand_nordic_desc"] { color:#000000 !important }
+</style>
 
 <script src="/js/ultrafood.js"></script>
 <script>
